@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IntareTech — Soluções em Tecnologia</title>
+  <meta name="description" content="IntareTech: desenvolvimento de sistemas, ERPs e soluções digitais sob medida." />
+
+  <!-- Open Graph (preview ao compartilhar link) -->
+  <meta property="og:title" content="IntareTech — Soluções em Tecnologia" />
+  <meta property="og:description" content="Desenvolvimento de sistemas, ERPs e soluções digitais sob medida." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg: #0b1722;        
+      --card: rgba(255,255,255,.06);
+      --border: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+
+      
+      --blue: rgb(11,47,86);     
+      --gold: rgb(225,184,56);   
+    }
+
+    *{ box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(225,184,56,.16), transparent 60%),
+        radial-gradient(900px 500px at 80% 0%, rgba(11,47,86,.30), transparent 55%),
+        radial-gradient(900px 500px at 50% 100%, rgba(255,255,255,.06), transparent 60%),
+        var(--bg);
+    }
+
+    .wrap{
+      min-height: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 56px 18px;
+    }
+
+    .container{
+      width: min(980px, 100%);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 16px;
+    }
+
+    .logo{
+      height: 64px;
+      width: auto;
+      display:block;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
+    }
+
+    .title{
+      margin:0;
+      font-size: 20px;
+      letter-spacing: .2px;
+    }
+
+    .tag{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(225,184,56,.12);
+    }
+
+    .card{
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 18px;
+      padding: 28px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 16px 50px rgba(0,0,0,.35);
+    }
+
+    h2{
+      margin:0 0 10px;
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: -.5px;
+    }
+
+    p{
+      margin:0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 62ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .item{
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,.18);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .item b{
+      display:block;
+      color: rgba(255,255,255,.92);
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .item span{
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .actions{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-decoration:none;
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      font-weight: 600;
+      font-size: 14px;
+      transition: transform .12s ease, background .12s ease;
+    }
+    a.btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.09); }
+
+    a.btn.primary{
+      border-color: rgba(225,184,56,.30);
+      background: linear-gradient(135deg, rgba(225,184,56,.22), rgba(11,47,86,.22));
+    }
+
+    footer{
+      margin-top: 16px;
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+      padding: 0 4px;
+      display:flex;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 860px){
+      header{ flex-direction: column; align-items:flex-start; }
+      .grid{ grid-template-columns: 1fr; }
+      h2{ font-size: 30px; }
+      .logo{ height: 58px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+
+      <header>
+        <div class="brand">
+          <img class="logo" src="IntareTech.png" alt="IntareTech" />
+          <div>
+            <h1 class="title">IntareTech</h1>
+            <div class="tag">Soluções em tecnologia • ERPs • Sistemas corporativos</div>
+          </div>
+        </div>
+
+        <div class="pill"><span class="dot"></span> Site corporativo em construção</div>
+      </header>
+
+      <section class="card">
+        <h2>Tecnologia sob medida para organizações exigentes.</h2>
+        <p>
+          A IntareTech desenvolve soluções digitais com foco em desempenho, segurança e escalabilidade.
+          Em breve, você verá aqui nossa vitrine completa de produtos, cases e serviços.
+        </p>
+
+        <div class="grid">
+          <div class="item">
+            <b>Produtos</b>
+            <span>ERPs e plataformas SaaS orientadas a processos e auditoria.</span>
+          </div>
+          <div class="item">
+            <b>Serviços</b>
+            <span>Implantação, suporte, evolução e integrações.</span>
+          </div>
+          <div class="item">
+            <b>Parcerias</b>
+            <span>Modelo B2B para projetos e fornecimento de soluções.</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="mailto:vendas@intaretech.com.br">Falar com Vendas</a>
+          <a class="btn" href="mailto:admin@intaretech.com.br">Contato Administrativo</a>
+          <a class="btn" href="mailto:suporte@intaretech.com.br">Suporte</a>
+        </div>
+      </section>
+
+      <footer>
+        <span>© <span id="y"></span> IntareTech. Todos os direitos reservados.</span>
+        <span>intaretech.com.br</span>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
