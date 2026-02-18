@@ -1,25 +1,23 @@
-<!doctype html>
-<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>IntareTech — Produtos (DEKER, Legore) e Serviços Web</title>
-  <meta name="description" content="IntareTech: desenvolvimento de ERPs e plataformas SaaS. Produtos: DEKER e Legore. Serviços: sites, portais e sustentação com SLA." />
+  <title>IntareTech — Soluções em Tecnologia</title>
+  <meta name="description" content="IntareTech: produtos e soluções digitais para organizações. ERPs/SaaS, portais gerenciados e sistemas corporativos." />
 
-  <meta property="og:title" content="IntareTech — Produtos e Serviços" />
-  <meta property="og:description" content="Produtos: DEKER e Legore. Serviços: sites, portais e sustentação com SLA." />
+  <meta property="og:title" content="IntareTech — Soluções em Tecnologia" />
+  <meta property="og:description" content="Produtos (ERPs/SaaS), portais gerenciados e sistemas corporativos." />
   <meta property="og:type" content="website" />
 
   <style>
     :root{
-      --bg: #d7e2ee;
-      --card: rgba(255,255,255,.72);
-      --border: rgba(11,47,86,.18);
-      --text: rgba(10, 24, 36, .92);
-      --muted: rgba(10, 24, 36, .68);
+      --bg: #d5dee3;
+      --card: rgba(255,255,255,.82);
+      --border: rgba(11,47,86,.16);
+      --text: rgba(10, 24, 36, .94);
+      --muted: rgba(10, 24, 36, .72);
       --blue: rgb(11,47,86);
+      --turq: #1aa6a6;
       --gold: rgb(225,184,56);
-      --ok: rgba(34,197,94,.85);
     }
 
     *{ box-sizing: border-box; }
@@ -29,11 +27,7 @@
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(900px 500px at 18% 8%, rgba(225,184,56,.18), transparent 60%),
-        radial-gradient(900px 500px at 82% 0%, rgba(11,47,86,.18), transparent 55%),
-        radial-gradient(900px 500px at 50% 105%, rgba(255,255,255,.55), transparent 62%),
-        var(--bg);
+      background: var(--bg);
     }
 
     .wrap{
@@ -66,21 +60,16 @@
       height: 92px;
       width: auto;
       display:block;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,.18));
-    }
-
-    .title{
-      margin:0;
-      font-size: 20px;
-      letter-spacing: .2px;
-      color: var(--blue);
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.14));
     }
 
     .tag{
-      margin: 6px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.3;
+      margin: 0;
+      color: rgba(10, 24, 36, .80);
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 650;
+      letter-spacing: .2px;
     }
 
     nav{
@@ -99,9 +88,9 @@
       border-radius: 999px;
       border: 1px solid var(--border);
       text-decoration:none;
-      color: rgba(10, 24, 36, .86);
-      background: rgba(255,255,255,.52);
-      font-weight: 650;
+      color: rgba(10, 24, 36, .88);
+      background: rgba(255,255,255,.70);
+      font-weight: 700;
       font-size: 13px;
       box-shadow: 0 10px 20px rgba(0,0,0,.06);
       transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
@@ -110,7 +99,7 @@
 
     a.navlink:hover{
       transform: translateY(-1px);
-      background: rgba(255,255,255,.70);
+      background: rgba(255,255,255,.84);
       box-shadow: 0 12px 22px rgba(0,0,0,.08);
     }
 
@@ -120,9 +109,9 @@
       gap: 8px;
       padding: 10px 12px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,.55);
+      background: rgba(255,255,255,.70);
       border-radius: 999px;
-      color: var(--muted);
+      color: rgba(10, 24, 36, .72);
       font-size: 13px;
       white-space: nowrap;
       box-shadow: 0 10px 22px rgba(0,0,0,.06);
@@ -130,123 +119,45 @@
 
     .dot{
       width:8px; height:8px; border-radius:50%;
-      background: var(--gold);
-      box-shadow: 0 0 0 4px rgba(225,184,56,.18);
+      background: var(--turq);
+      box-shadow: 0 0 0 4px rgba(26,166,166,.16);
     }
 
     .card{
       border: 1px solid var(--border);
       background: var(--card);
       border-radius: 18px;
-      padding: 26px;
-      backdrop-filter: blur(10px);
+      padding: 28px;
       box-shadow: 0 18px 46px rgba(0,0,0,.10);
     }
 
     .stack{
       display:flex;
       flex-direction: column;
-      gap: 14px;
-    }
-
-    .hero{
-      display:grid;
-      grid-template-columns: 1.3fr .7fr;
-      gap: 14px;
-      align-items: stretch;
+      gap: 16px;
     }
 
     h2{
       margin:0 0 10px;
-      font-size: 34px;
-      line-height: 1.1;
-      letter-spacing: -.5px;
-      color: rgba(10, 24, 36, .94);
+      font-size: 36px;
+      line-height: 1.08;
+      letter-spacing: -.6px;
+      color: rgba(10, 24, 36, .96);
     }
 
     h3{
       margin:0 0 8px;
-      font-size: 18px;
+      font-size: 20px;
       letter-spacing: -.2px;
-      color: rgba(10, 24, 36, .94);
+      color: rgba(10, 24, 36, .96);
     }
 
     p{
       margin:0 0 14px;
       color: var(--muted);
-      font-size: 16px;
-      line-height: 1.6;
-      max-width: 70ch;
-    }
-
-    .kpi{
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.55);
-      border-radius: 14px;
-      padding: 14px;
-      display:flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .kpi .row{
-      display:flex;
-      gap: 10px;
-      align-items: baseline;
-      justify-content: space-between;
-      border-bottom: 1px dashed rgba(11,47,86,.18);
-      padding-bottom: 8px;
-    }
-    .kpi .row:last-child{ border-bottom: 0; padding-bottom: 0; }
-    .kpi b{ color: rgba(10, 24, 36, .92); font-size: 13px; }
-    .kpi span{ color: var(--muted); font-size: 13px; text-align:right; }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 6px;
-    }
-
-    .item{
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.55);
-      border-radius: 14px;
-      padding: 14px;
-    }
-
-    .item b{
-      display:block;
-      color: rgba(10, 24, 36, .92);
-      margin-bottom: 6px;
-      font-size: 14px;
-    }
-
-    .item span{
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-      display:block;
-    }
-
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.55);
-      font-size: 12px;
-      color: rgba(10, 24, 36, .78);
-      margin: 10px 0 0;
-      width: fit-content;
-    }
-
-    .badge .ok{
-      width:8px; height:8px; border-radius:50%;
-      background: var(--ok);
-      box-shadow: 0 0 0 4px rgba(34,197,94,.12);
+      font-size: 17px;
+      line-height: 1.65;
+      max-width: 78ch;
     }
 
     .twocol{
@@ -256,15 +167,26 @@
       margin-top: 6px;
     }
 
-    .list{
-      margin: 10px 0 0;
-      padding: 0 0 0 16px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.55;
+    .item{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.72);
+      border-radius: 14px;
+      padding: 16px;
     }
 
-    .list li{ margin: 6px 0; }
+    .item b{
+      display:block;
+      color: rgba(10, 24, 36, .94);
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .item span{
+      color: rgba(10, 24, 36, .72);
+      font-size: 14px;
+      line-height: 1.55;
+      display:block;
+    }
 
     .actions{
       display:flex;
@@ -283,8 +205,8 @@
       border: 1px solid var(--border);
       text-decoration:none;
       color: rgba(10, 24, 36, .92);
-      background: rgba(255,255,255,.65);
-      font-weight: 750;
+      background: rgba(255,255,255,.78);
+      font-weight: 800;
       font-size: 14px;
       transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
       box-shadow: 0 12px 22px rgba(0,0,0,.07);
@@ -292,20 +214,20 @@
 
     a.btn:hover{
       transform: translateY(-1px);
-      background: rgba(255,255,255,.78);
+      background: rgba(255,255,255,.90);
       box-shadow: 0 14px 26px rgba(0,0,0,.09);
     }
 
     a.btn.primary{
-      border-color: rgba(225,184,56,.40);
-      background: linear-gradient(135deg, rgba(225,184,56,.25), rgba(11,47,86,.12));
+      border-color: rgba(26,166,166,.35);
+      background: rgba(26,166,166,.12);
     }
 
     a.btn.small{
       padding: 10px 12px;
       border-radius: 10px;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     footer{
@@ -335,235 +257,13 @@
       filter: drop-shadow(0 6px 10px rgba(0,0,0,.08));
     }
 
-    .muted-note{
-      color: rgba(10, 24, 36, .62);
-      font-size: 12px;
-      line-height: 1.55;
-      margin-top: 10px;
-      max-width: 85ch;
-    }
-
-    .sep{
-      height: 1px;
-      background: rgba(11,47,86,.14);
-      margin: 4px 0;
-    }
-
     @media (max-width: 980px){
       header{ flex-direction: column; align-items:flex-start; }
       nav{ justify-content:flex-start; }
-      .hero{ grid-template-columns: 1fr; }
-      .grid{ grid-template-columns: 1fr; }
       .twocol{ grid-template-columns: 1fr; }
-      h2{ font-size: 30px; }
-      .logo{ height: 80px; }
+      h2{ font-size: 32px; }
+      .logo{ height: 84px; }
       .footer-right{ margin-left: 0; }
     }
   </style>
 </head>
-
-<body>
-  <div class="wrap">
-    <div class="container">
-
-      <header>
-        <div class="brand">
-          <img class="logo" src="IntareTech.png" alt="IntareTech" />
-          <div>
-            <h1 class="title">IntareTech</h1>
-            <div class="tag">Produtos (ERPs/SaaS) • Portais gerenciados • Sistemas corporativos</div>
-          </div>
-        </div>
-
-        <nav>
-          <a class="navlink" href="#produtos">Produtos</a>
-          <a class="navlink" href="#servicos">Serviços</a>
-          <a class="navlink" href="#contato">Contato</a>
-          <div class="pill"><span class="dot"></span> Vitrine em evolução</div>
-        </nav>
-      </header>
-
-      <!-- HERO -->
-      <section class="card stack" id="topo">
-        <div class="hero">
-          <div class="item" style="padding:18px;">
-            <h2>Tecnologia sob medida para organizações exigentes.</h2>
-            <p>
-              A IntareTech desenvolve <b>ERPs e plataformas SaaS</b> com foco em desempenho, segurança, trilhas de auditoria e escalabilidade.
-              Também entregamos <b>sites institucionais</b> e <b>portais</b> no modelo profissional de <b>setup + sustentação mensal</b>.
-            </p>
-
-            <div class="actions">
-              <a class="btn primary" href="mailto:vendas@intaretech.com.br?subject=Contato%20Comercial%20(IntareTech)&body=Olá%2C%20quero%20falar%20sobre%20produtos%20ou%20serviços.%0A%0ANome%3A%0AOrganização%3A%0AObjetivo%3A%0A">Falar com Vendas</a>
-              <a class="btn" href="#produtos">Ver Produtos</a>
-              <a class="btn" href="#servicos">Ver Serviços</a>
-            </div>
-
-            <div class="muted-note">
-              <b>Importante:</b> Portais e sistemas críticos são entregues com escopo definido e canal de suporte por ticket (para garantir previsibilidade e SLA).
-            </div>
-          </div>
-
-          <aside class="kpi">
-            <h3>Como trabalhamos</h3>
-            <div class="row"><b>Entrega</b><span>escopo fechado + CRs controlados</span></div>
-            <div class="row"><b>Operação</b><span>sustentação mensal (SLA)</span></div>
-            <div class="row"><b>Evolução</b><span>banco de horas / roadmap</span></div>
-            <div class="row"><b>Stack</b><span>Laravel • Angular (quando necessário)</span></div>
-            <div class="row"><b>Qualidade</b><span>segurança • logs • performance</span></div>
-            <div class="badge"><span class="ok"></span> Foco em produto e recorrência</div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- PRODUTOS -->
-      <section class="card stack" id="produtos" style="margin-top:14px;">
-        <h3>Produtos</h3>
-        <p>
-          Dois produtos em desenvolvimento avançado, com foco em processos, rastreabilidade e governança.
-        </p>
-
-        <div class="twocol">
-          <div class="item">
-            <b>DEKER — Gestão de Unidades Prisionais</b>
-            <span>
-              Plataforma para gestão de unidades prisionais, com ênfase em controle operacional, auditoria e histórico.
-              Produto com direcionamento restrito ao setor público (estadual e, potencialmente, federal).
-            </span>
-            <ul class="list">
-              <li>Gestão de indivíduos e ciclo de vínculo (admissão, desligamento, movimentações)</li>
-              <li>Registros e relatórios orientados a auditoria</li>
-              <li>Segurança, permissões e rastreabilidade</li>
-            </ul>
-            <div class="actions">
-              <a class="btn small primary" href="mailto:vendas@intaretech.com.br?subject=DEKER%20-%20Interesse%20Comercial&body=Olá%2C%20tenho%20interesse%20no%20DEKER.%0A%0AÓrgão%2FInstituição%3A%0ACidade%2FUF%3A%0AObjetivo%3A%0A">Quero conversar sobre o DEKER</a>
-            </div>
-          </div>
-
-          <div class="item">
-            <b>Legore — Gestão de Bibliotecas (SIGB)</b>
-            <span>
-              Sistema de gestão de bibliotecas para instituições públicas e privadas, com organização de acervo, atendimento e processos.
-              Direcionado a bibliotecas municipais, escolares, universitárias e corporativas.
-            </span>
-            <ul class="list">
-              <li>Cadastro e gestão de acervo, autores, exemplares e categorias</li>
-              <li>Empréstimos, reservas e histórico</li>
-              <li>Relatórios e indicadores operacionais</li>
-            </ul>
-            <div class="actions">
-              <a class="btn small primary" href="mailto:vendas@intaretech.com.br?subject=Legore%20-%20Interesse%20Comercial&body=Olá%2C%20tenho%20interesse%20no%20Legore.%0A%0AInstituição%3A%0ACidade%2FUF%3A%0AObjetivo%3A%0A">Quero conversar sobre o Legore</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="muted-note">
-          Se você representa órgão público, biblioteca ou instituição e quer avaliar aderência, nos envie contexto e requisitos — respondemos com direcionamento técnico e próximos passos.
-        </div>
-      </section>
-
-      <!-- SERVIÇOS -->
-      <section class="card stack" id="servicos" style="margin-top:14px;">
-        <h3>Serviços</h3>
-        <p>
-          Serviços empacotados para manter previsibilidade de prazo, custo e qualidade. Sem “escopo infinito”.
-        </p>
-
-        <div class="grid">
-          <div class="item">
-            <b>Sites Institucionais</b>
-            <span>Entrega objetiva, performance e presença profissional. Ideal para empresas e unidades públicas.</span>
-            <ul class="list">
-              <li>Home + páginas essenciais</li>
-              <li>Formulário de contato</li>
-              <li>SEO básico e publicação</li>
-            </ul>
-          </div>
-
-          <div class="item">
-            <b>Portais (Setup + Sustentação)</b>
-            <span>Portais com operação contínua: conteúdo, usuários, permissões, logs e evolução planejada.</span>
-            <ul class="list">
-              <li>Área restrita e perfis</li>
-              <li>Painel administrativo</li>
-              <li>Logs e rastreabilidade</li>
-            </ul>
-          </div>
-
-          <div class="item">
-            <b>Integrações e Evolução</b>
-            <span>Integrações com APIs, migrações, automações e evolução contínua por banco de horas.</span>
-            <ul class="list">
-              <li>Integração com sistemas existentes</li>
-              <li>Backlog e CRs controlados</li>
-              <li>Roadmap mensal (quando contratado)</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="sep"></div>
-
-        <div class="twocol">
-          <div class="item">
-            <b>Planos de Sustentação (Mensal)</b>
-            <span>Para portais e sistemas que precisam de segurança, estabilidade e previsibilidade.</span>
-            <ul class="list">
-              <li><b>M1 — Sustentação:</b> segurança, backups, monitoramento e correções críticas</li>
-              <li><b>M2 — Sustentação + Evolução:</b> M1 + banco de horas mensal</li>
-              <li><b>M3 — Evolução Ativa:</b> mais horas + prioridade + roadmap mensal</li>
-            </ul>
-            <div class="muted-note">
-              Contrato com SLA e canal de suporte por ticket. WhatsApp não é canal oficial de suporte.
-            </div>
-          </div>
-
-          <div class="item">
-            <b>Como orçamos (escopo fechado)</b>
-            <span>Orçamento sempre parte de um checklist técnico para classificar: site ou portal.</span>
-            <ul class="list">
-              <li>Se tiver login/perfis/integrações → é <b>portal</b></li>
-              <li>Escopo documentado → entrega previsível</li>
-              <li>O que não estiver no escopo vira <b>Change Request</b></li>
-            </ul>
-            <div class="actions">
-              <a class="btn small" href="mailto:vendas@intaretech.com.br?subject=Or%C3%A7amento%20-%20Site%20ou%20Portal&body=Olá%2C%20quero%20um%20orçamento.%0A%0A1)%20Site%20ou%20Portal%3F%20(descreva)%0A2)%20Precisa%20de%20login%2F%C3%A1rea%20restrita%3F%0A3)%20Integra%C3%A7%C3%B5es%3F%0A4)%20Prazo%20desejado%3A%0A5)%20Organiza%C3%A7%C3%A3o%2Fsegmento%3A%0A">Solicitar orçamento</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTATO -->
-      <section class="card stack" id="contato" style="margin-top:14px;">
-        <h3>Contato</h3>
-        <p>
-          Direcionamos o atendimento por canal para manter velocidade e rastreabilidade.
-        </p>
-
-        <div class="actions">
-          <a class="btn primary" href="mailto:vendas@intaretech.com.br?subject=Contato%20Comercial%20(IntareTech)">vendas@intaretech.com.br</a>
-          <a class="btn" href="mailto:parcerias@intaretech.com.br?subject=Parcerias%20B2B%20(IntareTech)">parcerias@intaretech.com.br</a>
-          <a class="btn" href="mailto:suporte@intaretech.com.br?subject=Suporte%20(IntareTech)">suporte@intaretech.com.br</a>
-          <a class="btn" href="mailto:admin@intaretech.com.br?subject=Contato%20Administrativo%20(IntareTech)">admin@intaretech.com.br</a>
-        </div>
-
-        <div class="muted-note">
-          <b>Dica:</b> se você ainda não tem <i>parcerias@</i>, pode manter o botão e apontar para <i>vendas@</i> por enquanto, ou criar a caixa no seu provedor de e-mail.
-        </div>
-      </section>
-
-      <footer>
-        <span>intaretech.com.br</span>
-        <div class="footer-right">
-          <span>© <span id="y"></span></span>
-          <img class="footer-logo" src="IntareTech_Horizontal.png" alt="IntareTech" />
-        </div>
-      </footer>
-
-    </div>
-  </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
