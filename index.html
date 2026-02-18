@@ -1,8 +1,10 @@
+<!doctype html>
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>IntareTech — Soluções em Tecnologia</title>
-  <meta name="description" content="IntareTech: produtos e soluções digitais para organizações. ERPs/SaaS, portais gerenciados e sistemas corporativos." />
+  <meta name="description" content="Produtos e soluções digitais para organizações: ERPs/SaaS, portais gerenciados e sistemas corporativos." />
 
   <meta property="og:title" content="IntareTech — Soluções em Tecnologia" />
   <meta property="og:description" content="Produtos (ERPs/SaaS), portais gerenciados e sistemas corporativos." />
@@ -10,14 +12,13 @@
 
   <style>
     :root{
-      --bg: #d5dee3;
-      --card: rgba(255,255,255,.82);
+      --bg: #d6dde2;
+      --card: rgba(255,255,255,.86);
       --border: rgba(11,47,86,.16);
       --text: rgba(10, 24, 36, .94);
       --muted: rgba(10, 24, 36, .72);
       --blue: rgb(11,47,86);
       --turq: #1aa6a6;
-      --gold: rgb(225,184,56);
     }
 
     *{ box-sizing: border-box; }
@@ -60,15 +61,15 @@
       height: 92px;
       width: auto;
       display:block;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,.14));
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.12));
     }
 
     .tag{
       margin: 0;
-      color: rgba(10, 24, 36, .80);
-      font-size: 16px;
+      color: rgba(10, 24, 36, .82);
+      font-size: 18px;
       line-height: 1.35;
-      font-weight: 650;
+      font-weight: 700;
       letter-spacing: .2px;
     }
 
@@ -89,8 +90,8 @@
       border: 1px solid var(--border);
       text-decoration:none;
       color: rgba(10, 24, 36, .88);
-      background: rgba(255,255,255,.70);
-      font-weight: 700;
+      background: rgba(255,255,255,.78);
+      font-weight: 750;
       font-size: 13px;
       box-shadow: 0 10px 20px rgba(0,0,0,.06);
       transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
@@ -99,7 +100,7 @@
 
     a.navlink:hover{
       transform: translateY(-1px);
-      background: rgba(255,255,255,.84);
+      background: rgba(255,255,255,.92);
       box-shadow: 0 12px 22px rgba(0,0,0,.08);
     }
 
@@ -109,7 +110,7 @@
       gap: 8px;
       padding: 10px 12px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,.70);
+      background: rgba(255,255,255,.78);
       border-radius: 999px;
       color: rgba(10, 24, 36, .72);
       font-size: 13px;
@@ -137,16 +138,23 @@
       gap: 16px;
     }
 
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
     h2{
       margin:0 0 10px;
-      font-size: 36px;
+      font-size: 38px;
       line-height: 1.08;
       letter-spacing: -.6px;
       color: rgba(10, 24, 36, .96);
     }
 
     h3{
-      margin:0 0 8px;
+      margin:0 0 10px;
       font-size: 20px;
       letter-spacing: -.2px;
       color: rgba(10, 24, 36, .96);
@@ -155,37 +163,16 @@
     p{
       margin:0 0 14px;
       color: var(--muted);
-      font-size: 17px;
+      font-size: 18px;
       line-height: 1.65;
       max-width: 78ch;
     }
 
-    .twocol{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-top: 6px;
-    }
-
-    .item{
+    .panel{
       border: 1px solid var(--border);
-      background: rgba(255,255,255,.72);
+      background: rgba(255,255,255,.78);
       border-radius: 14px;
       padding: 16px;
-    }
-
-    .item b{
-      display:block;
-      color: rgba(10, 24, 36, .94);
-      margin-bottom: 8px;
-      font-size: 15px;
-    }
-
-    .item span{
-      color: rgba(10, 24, 36, .72);
-      font-size: 14px;
-      line-height: 1.55;
-      display:block;
     }
 
     .actions{
@@ -205,8 +192,8 @@
       border: 1px solid var(--border);
       text-decoration:none;
       color: rgba(10, 24, 36, .92);
-      background: rgba(255,255,255,.78);
-      font-weight: 800;
+      background: rgba(255,255,255,.86);
+      font-weight: 850;
       font-size: 14px;
       transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
       box-shadow: 0 12px 22px rgba(0,0,0,.07);
@@ -214,7 +201,7 @@
 
     a.btn:hover{
       transform: translateY(-1px);
-      background: rgba(255,255,255,.90);
+      background: rgba(255,255,255,.96);
       box-shadow: 0 14px 26px rgba(0,0,0,.09);
     }
 
@@ -227,7 +214,35 @@
       padding: 10px 12px;
       border-radius: 10px;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 850;
+    }
+
+    .twocol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .item{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.78);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .item b{
+      display:block;
+      color: rgba(10, 24, 36, .94);
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .item span{
+      color: rgba(10, 24, 36, .72);
+      font-size: 14px;
+      line-height: 1.55;
+      display:block;
     }
 
     footer{
@@ -260,6 +275,7 @@
     @media (max-width: 980px){
       header{ flex-direction: column; align-items:flex-start; }
       nav{ justify-content:flex-start; }
+      .hero{ grid-template-columns: 1fr; }
       .twocol{ grid-template-columns: 1fr; }
       h2{ font-size: 32px; }
       .logo{ height: 84px; }
@@ -267,3 +283,138 @@
     }
   </style>
 </head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+
+      <header>
+        <div class="brand">
+          <img class="logo" src="IntareTech.png" alt="IntareTech" />
+          <div>
+            <div class="tag">Produtos (ERPs/SaaS) • Portais gerenciados • Sistemas corporativos</div>
+          </div>
+        </div>
+
+        <nav>
+          <a class="navlink" href="#produtos">Produtos</a>
+          <a class="navlink" href="#servicos">Serviços</a>
+          <a class="navlink" href="#contato">Contato</a>
+          <div class="pill"><span class="dot"></span> Site institucional</div>
+        </nav>
+      </header>
+
+      <section class="card stack" id="topo">
+        <div class="hero">
+          <div class="panel">
+            <h2>Tecnologia com presença forte e entrega profissional.</h2>
+            <p>
+              A IntareTech desenvolve soluções digitais para organizações que valorizam clareza, confiabilidade e boa apresentação.
+              Projetos e produtos pensados para escalar, com experiência simples para o usuário e comunicação direta.
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="mailto:vendas@intaretech.com.br?subject=Contato%20Comercial%20(IntareTech)&body=Olá%2C%20quero%20falar%20sobre%20produtos%20ou%20serviços.%0A%0ANome%3A%0AOrganização%3A%0AObjetivo%3A%0A">Falar com Vendas</a>
+              <a class="btn" href="#produtos">Ver Produtos</a>
+              <a class="btn" href="#contato">Contato</a>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>O que entregamos</h3>
+            <div class="twocol" style="margin-top:0;">
+              <div class="item">
+                <b>Produtos</b>
+                <span>ERPs e plataformas SaaS orientadas a processos e resultado.</span>
+              </div>
+              <div class="item">
+                <b>Portais gerenciados</b>
+                <span>Presença digital com organização, consistência e evolução.</span>
+              </div>
+              <div class="item">
+                <b>Sistemas corporativos</b>
+                <span>Soluções sob medida para necessidades específicas.</span>
+              </div>
+              <div class="item">
+                <b>Integrações</b>
+                <span>Conexão com serviços e sistemas para automatizar rotinas.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card stack" id="produtos" style="margin-top:14px;">
+        <h3>Produtos</h3>
+        <p>Dois produtos em desenvolvimento avançado, voltados a organizações com rotinas e gestão contínua.</p>
+
+        <div class="twocol">
+          <div class="item">
+            <b>DEKER</b>
+            <span>
+              Sistema para gestão institucional com foco em organização, padronização e segurança operacional.
+              Direcionado a cenários de alta criticidade no setor público.
+            </span>
+            <div class="actions">
+              <a class="btn small primary" href="mailto:vendas@intaretech.com.br?subject=DEKER%20-%20Interesse%20Comercial&body=Olá%2C%20tenho%20interesse%20no%20DEKER.%0A%0AÓrgão%2FInstituição%3A%0ACidade%2FUF%3A%0AObjetivo%3A%0A">Quero conversar sobre o DEKER</a>
+            </div>
+          </div>
+
+          <div class="item">
+            <b>Legore</b>
+            <span>
+              Sistema de gestão de bibliotecas para instituições públicas e privadas.
+              Organiza o acervo, melhora a rotina e facilita o atendimento ao público.
+            </span>
+            <div class="actions">
+              <a class="btn small primary" href="mailto:vendas@intaretech.com.br?subject=Legore%20-%20Interesse%20Comercial&body=Olá%2C%20tenho%20interesse%20no%20Legore.%0A%0AInstituição%3A%0ACidade%2FUF%3A%0AObjetivo%3A%0A">Quero conversar sobre o Legore</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card stack" id="servicos" style="margin-top:14px;">
+        <h3>Serviços</h3>
+        <p>
+          Projetos web com perfil corporativo e comunicação objetiva. Ideal para organizações que precisam melhorar presença digital,
+          organizar informações e oferecer uma experiência clara ao público.
+        </p>
+
+        <div class="twocol">
+          <div class="item">
+            <b>Sites institucionais</b>
+            <span>Presença profissional, direta e com boa performance.</span>
+          </div>
+          <div class="item">
+            <b>Portais e áreas online</b>
+            <span>Ambientes estruturados para conteúdos, páginas e experiências digitais.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card stack" id="contato" style="margin-top:14px;">
+        <h3>Contato</h3>
+        <p>Envie o objetivo e o contexto. Retornamos com direcionamento e próximos passos.</p>
+
+        <div class="actions">
+          <a class="btn primary" href="mailto:vendas@intaretech.com.br?subject=Contato%20Comercial%20(IntareTech)">vendas@intaretech.com.br</a>
+          <a class="btn" href="mailto:suporte@intaretech.com.br?subject=Suporte%20(IntareTech)">suporte@intaretech.com.br</a>
+          <a class="btn" href="mailto:admin@intaretech.com.br?subject=Contato%20Administrativo%20(IntareTech)">admin@intaretech.com.br</a>
+        </div>
+      </section>
+
+      <footer>
+        <span>intaretech.com.br</span>
+        <div class="footer-right">
+          <span>© <span id="y"></span></span>
+          <img class="footer-logo" src="IntareTech_Horizontal.png" alt="IntareTech" />
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
