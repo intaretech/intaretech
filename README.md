@@ -1,3 +1,4 @@
+<img width="1024" height="148" alt="IntareTech_Horizontal_Cor" src="https://github.com/user-attachments/assets/7635b0af-2daa-41a9-b6a9-dc58c969e8e9" />
 ## Hi there 👋
 
 <!--
