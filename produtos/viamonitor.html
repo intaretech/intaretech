@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ViaMonitor | Controle do Veículo no Dia a Dia | IntareTech</title>
+  <meta name="description" content="ViaMonitor é um aplicativo prático e intuitivo para o motorista acompanhar abastecimentos, consumo, manutenções, serviços, despesas, vencimentos, revisões, histórico e alertas do veículo." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="author" content="IntareTech" />
+  <meta name="theme-color" content="#0b2f56" />
+  <link rel="canonical" href="https://www.intaretech.com.br/produtos/viamonitor.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IntareTech" />
+  <meta property="og:title" content="ViaMonitor | Controle do Veículo no Dia a Dia" />
+  <meta property="og:description" content="Aplicativo para o motorista acompanhar abastecimentos, manutenções, despesas, vencimentos, histórico e alertas do veículo." />
+  <meta property="og:url" content="https://www.intaretech.com.br/produtos/viamonitor.html" />
+  <meta property="og:image" content="https://www.intaretech.com.br/produtos/images/viamonitor_logo.webp" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ViaMonitor | Controle do Veículo no Dia a Dia" />
+  <meta name="twitter:description" content="Aplicativo prático e intuitivo para o motorista acompanhar tudo sobre seu veículo na palma da mão." />
+  <meta name="twitter:image" content="https://www.intaretech.com.br/produtos/images/viamonitor_logo.webp" />
+
+  <style>
+    :root{
+      --scale: 1;
+      --bg: #d6dde2;
+      --text: rgba(10, 24, 36, .94);
+      --muted: rgba(10, 24, 36, .72);
+      --line: rgba(11,47,86,.22);
+      --lineSoft: rgba(11,47,86,.14);
+      --blue: rgb(11,47,86);
+      --blue2: #082842;
+      --turq: #1aa6a6;
+      --orange: #f07d18;
+      --radius: 16px;
+      --card-bg: rgba(255,255,255,.34);
+      --card-border: rgba(11,47,86,.14);
+      --btn-bg: rgba(11,47,86,.92);
+      --btn-text: rgba(255,255,255,.96);
+      --btn-cut: 14px;
+    }
+
+    *{ box-sizing: border-box; }
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+    html,
+    body{
+      min-height: 100%;
+    }
+
+    body{
+      margin:0;
+      font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      font-weight: 400;
+    }
+
+    .wrap{
+      min-height: 100%;
+      display:flex;
+      justify-content:center;
+      padding: clamp(18px, 3.5vw, 44px);
+    }
+
+    .container{
+      width: min(1700px, 96vw);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+      min-width: 220px;
+      text-decoration:none;
+    }
+
+    .logo{
+      height: clamp(56px, 6.1vw, 86px);
+      width: auto;
+      display:block;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.10));
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+
+    a.navlink{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 2px;
+      text-decoration:none;
+      color: rgba(10, 24, 36, .90);
+      font-weight: 700;
+      font-size: calc(16px * var(--scale));
+      letter-spacing: .1px;
+      border-bottom: 2px solid transparent;
+      transition: transform .12s ease, border-color .12s ease, opacity .12s ease;
+      white-space: nowrap;
+    }
+
+    a.navlink:hover,
+    a.navlink:focus-visible{
+      transform: translateY(-1px);
+      border-color: rgba(26,166,166,.45);
+      opacity: .92;
+      outline: none;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 12px 10px 18px;
+      color: rgba(10, 24, 36, .72);
+      font-size: calc(15px * var(--scale));
+      font-weight: 600;
+      white-space: nowrap;
+      border-left: 1px solid var(--lineSoft);
+      margin-left: 2px;
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background: var(--turq);
+      box-shadow: 0 0 0 4px rgba(26,166,166,.16);
+    }
+
+    .productHero{
+      position:relative;
+      min-height: 430px;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.28);
+      background:
+        linear-gradient(90deg, rgba(5,28,49,.96) 0%, rgba(7,42,70,.88) 45%, rgba(7,42,70,.58) 72%, rgba(7,42,70,.40) 100%),
+        url("images/viamonitor_box.webp") center / cover no-repeat;
+      box-shadow: 0 24px 54px rgba(0,0,0,.16);
+      isolation:isolate;
+    }
+
+    .productHero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 68% 38%, rgba(26,166,166,.30), transparent 34%),
+        radial-gradient(circle at 90% 78%, rgba(240,125,24,.18), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+      z-index:0;
+    }
+
+    .heroContent{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns: minmax(0, .9fr) minmax(420px, .8fr);
+      gap: 32px;
+      min-height: 430px;
+      align-items:center;
+      padding: clamp(28px, 5vw, 72px);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      color: rgba(255,255,255,.88);
+      font-size: calc(15px * var(--scale));
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow span{
+      width: 10px;
+      height: 10px;
+      border-radius:50%;
+      background: var(--turq);
+      box-shadow: 0 0 0 5px rgba(26,166,166,.18);
+    }
+
+    .productLogoHero{
+      width: min(360px, 72vw);
+      height: auto;
+      display:block;
+      margin-bottom: 22px;
+      filter: drop-shadow(0 18px 30px rgba(0,0,0,.22));
+    }
+
+    h1{
+      margin:0;
+      color: #fff;
+      font-size: calc(clamp(42px, 5.2vw, 76px) * var(--scale));
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 700;
+      max-width: 12ch;
+    }
+
+    .heroLead{
+      margin: 22px 0 0;
+      color: rgba(255,255,255,.88);
+      font-size: calc(22px * var(--scale));
+      line-height: 1.45;
+      max-width: 39ch;
+      text-align: justify;
+      hyphens: auto;
+      overflow-wrap: break-word;
+    }
+
+    .heroFlow{
+      position:relative;
+      min-height: 315px;
+    }
+
+    .flowCard{
+      position:absolute;
+      min-width: 178px;
+      padding: 15px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(133,232,238,.34);
+      background: rgba(7,39,66,.62);
+      box-shadow: 0 18px 34px rgba(0,0,0,.20), inset 0 1px 0 rgba(255,255,255,.10);
+      backdrop-filter: blur(8px);
+      animation: floatCard 8s ease-in-out infinite;
+    }
+
+    .flowCard:nth-child(2){ animation-delay: .5s; }
+    .flowCard:nth-child(3){ animation-delay: 1s; }
+    .flowCard:nth-child(4){ animation-delay: 1.5s; }
+
+    .flowCard strong{
+      display:block;
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .flowCard svg{
+      width: 46px;
+      height: 46px;
+      color: rgba(133,232,238,.96);
+    }
+
+    .flowCard.abastecimentos{
+      top: 8px;
+      left: 0;
+    }
+
+    .flowCard.manutencoes{
+      top: 96px;
+      left: 198px;
+      min-width: 210px;
+      transform: scale(1.05);
+      border-color: rgba(133,232,238,.48);
+      background: rgba(10,82,116,.64);
+    }
+
+    .flowCard.lembretes{
+      top: 64px;
+      right: 26px;
+    }
+
+    .flowCard.alertas{
+      bottom: 0;
+      left: 88px;
+      min-width: 230px;
+    }
+
+    .flowLine{
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      opacity:.86;
+    }
+
+    @keyframes floatCard{
+      0%, 100%{ transform: translateY(0); }
+      50%{ transform: translateY(-80px); }
+    }
+
+    .section{
+      padding: 34px 0;
+      border-bottom: 1px solid var(--lineSoft);
+    }
+
+    .section:last-of-type{
+      border-bottom: none;
+    }
+
+    .contentGrid{
+      display:grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(390px, .85fr);
+      gap: clamp(22px, 4vw, 64px);
+      align-items:start;
+    }
+
+    .infoList{
+      display:flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .infoItem{
+      display:grid;
+      grid-template-columns: 76px minmax(0, 1fr);
+      gap: 18px;
+      padding: 26px 0;
+      border-bottom: 1px solid rgba(11,47,86,.13);
+    }
+
+    .infoItem:first-child{
+      padding-top: 4px;
+    }
+
+    .infoItem:last-child{
+      border-bottom: none;
+    }
+
+    .iconCircle{
+      width: 58px;
+      height: 58px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: var(--blue);
+      border: 2px solid rgba(26,166,166,.70);
+      background: rgba(255,255,255,.30);
+      box-shadow: 0 10px 20px rgba(0,0,0,.05);
+    }
+
+    .iconCircle svg{
+      width: 31px;
+      height: 31px;
+    }
+
+    h2{
+      margin:0 0 12px;
+      color: rgba(10,24,36,.97);
+      font-size: calc(clamp(27px, 3vw, 38px) * var(--scale));
+      line-height: 1.14;
+      letter-spacing: -.035em;
+      font-weight: 700;
+    }
+
+    h3{
+      margin:0 0 10px;
+      color: rgba(10,24,36,.94);
+      font-size: calc(25px * var(--scale));
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    p{
+      margin:0 0 14px;
+      color: var(--muted);
+      font-size: calc(19px * var(--scale));
+      line-height: 1.62;
+      max-width: 92ch;
+      font-weight: 400;
+      text-align: justify;
+      hyphens: auto;
+      overflow-wrap: break-word;
+    }
+
+    .sideCard{
+      border: 1px solid var(--card-border);
+      background: rgba(255,255,255,.42);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 20px 42px rgba(0,0,0,.08);
+    }
+
+    .sideCard h2{
+      font-size: calc(31px * var(--scale));
+      margin-bottom: 18px;
+    }
+
+    .moduleList{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .moduleList li{
+      display:grid;
+      grid-template-columns: 54px minmax(0,1fr);
+      gap: 14px;
+      align-items:center;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(11,47,86,.10);
+      color: rgba(10,24,36,.82);
+      font-size: calc(19px * var(--scale));
+      line-height: 1.32;
+      font-weight: 600;
+    }
+
+    .moduleList li:last-child{
+      border-bottom:none;
+    }
+
+    .moduleIcon{
+      width: 42px;
+      height: 42px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: var(--turq);
+    }
+
+    .moduleIcon svg{
+      width: 34px;
+      height: 34px;
+    }
+
+    .videoBox{
+      border: 1px solid rgba(11,47,86,.14);
+      background: rgba(255,255,255,.42);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 20px 42px rgba(0,0,0,.08);
+    }
+
+    .videoFrame{
+      width: 100%;
+      overflow:hidden;
+      border-radius: 14px;
+      border: 1px solid rgba(11,47,86,.12);
+      background: rgba(5,28,49,.16);
+    }
+
+    .videoFrame video{
+      width: 100%;
+      display:block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .contractSection{
+      display:grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1fr);
+      gap: 26px;
+      align-items:stretch;
+    }
+
+    .contractCard{
+      border: 1px solid var(--card-border);
+      background: rgba(255,255,255,.38);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 18px 38px rgba(0,0,0,.06);
+    }
+
+    .contractCard.dark{
+      background: linear-gradient(135deg, rgba(11,47,86,.95), rgba(7,76,99,.92));
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .contractCard.dark::before{
+      content:"";
+      position:absolute;
+      width: 220px;
+      height: 220px;
+      border-radius:50%;
+      right:-84px;
+      top:-86px;
+      background: rgba(26,166,166,.20);
+    }
+
+    .contractCard.dark::after{
+      content:"";
+      position:absolute;
+      width: 180px;
+      height: 180px;
+      border-radius:50%;
+      left:-78px;
+      bottom:-82px;
+      background: rgba(240,125,24,.15);
+    }
+
+    .contractCard.dark h2,
+    .contractCard.dark p{
+      position:relative;
+      z-index:1;
+      color:#fff;
+    }
+
+    .contractCard.dark p{
+      color: rgba(255,255,255,.82);
+    }
+
+    .checkList{
+      list-style:none;
+      padding:0;
+      margin: 18px 0 0;
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+    }
+
+    .checkList li{
+      display:flex;
+      gap: 12px;
+      color: rgba(10,24,36,.76);
+      font-size: calc(17px * var(--scale));
+      line-height: 1.48;
+    }
+
+    .contractCard.dark .checkList li{
+      color: rgba(255,255,255,.84);
+    }
+
+    .checkList svg{
+      flex: 0 0 23px;
+      width: 23px;
+      height: 23px;
+      color: var(--turq);
+      margin-top: 1px;
+    }
+
+    .cta{
+      display:grid;
+      grid-template-columns: 160px minmax(0, 1fr) auto;
+      gap: 26px;
+      align-items:center;
+      border: 1px solid rgba(11,47,86,.16);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.54), rgba(255,255,255,.28)),
+        radial-gradient(circle at 92% 50%, rgba(26,166,166,.14), transparent 30%);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 18px 38px rgba(0,0,0,.06);
+    }
+
+    .targetIcon{
+      width: 132px;
+      height: 132px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .targetIcon svg{
+      width: 132px;
+      height: 132px;
+    }
+
+    .cta h2{
+      margin-bottom: 8px;
+    }
+
+    .actions{
+      display:flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 10px 0;
+      text-decoration:none;
+      color: rgba(10, 24, 36, .90);
+      font-weight: 700;
+      font-size: calc(17px * var(--scale));
+      border-bottom: 2px solid rgba(26,166,166,.28);
+      transition: transform .12s ease, border-color .12s ease, opacity .12s ease, filter .12s ease;
+      white-space: nowrap;
+    }
+
+    a.btn:hover,
+    a.btn:focus-visible{
+      transform: translateY(-1px);
+      border-color: rgba(26,166,166,.62);
+      opacity: .94;
+      outline: none;
+    }
+
+    a.btn.primary{
+      color: var(--btn-text);
+      background: var(--btn-bg);
+      border: 0;
+      padding: 13px 22px;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--btn-cut)), calc(100% - var(--btn-cut)) 100%, 0 100%);
+      box-shadow: 0 12px 22px rgba(0,0,0,.14);
+    }
+
+    a.btn.orange{
+      background: var(--orange);
+    }
+
+    .benefitStrip{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .benefitItem{
+      display:grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 12px;
+      align-items:center;
+      border: 1px solid rgba(11,47,86,.12);
+      background: rgba(255,255,255,.30);
+      border-radius: 13px;
+      padding: 16px;
+    }
+
+    .benefitItem svg{
+      width: 38px;
+      height: 38px;
+      color: var(--blue);
+      opacity:.86;
+    }
+
+    .benefitItem strong{
+      display:block;
+      color: rgba(10,24,36,.88);
+      font-size: calc(16px * var(--scale));
+      line-height:1.2;
+      margin-bottom: 3px;
+    }
+
+    .benefitItem span{
+      display:block;
+      color: rgba(10,24,36,.62);
+      font-size: calc(14px * var(--scale));
+      line-height:1.25;
+    }
+
+    footer{
+      margin-top: 18px;
+      padding: 14px 0 0;
+      border-top: 1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: rgba(10, 24, 36, .62);
+      font-size: calc(14px * var(--scale));
+    }
+
+    .footer-right{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      margin-left:auto;
+    }
+
+    .footer-logo{
+      height: 18px;
+      width: auto;
+      display:block;
+      opacity: .92;
+      filter: drop-shadow(0 6px 10px rgba(0,0,0,.08));
+    }
+
+    @media (max-width: 1180px){
+      .heroContent{
+        grid-template-columns: 1fr;
+      }
+
+      .heroFlow{
+        min-height: 250px;
+      }
+
+      .flowCard.abastecimentos{ left:0; top:0; }
+      .flowCard.manutencoes{ left: 38%; top: 62px; }
+      .flowCard.lembretes{ right:0; top: 12px; }
+      .flowCard.alertas{ left: 20%; bottom:0; }
+
+      .contentGrid,
+      .contractSection{
+        grid-template-columns: 1fr;
+      }
+
+      .cta{
+        grid-template-columns: 120px 1fr;
+      }
+
+      .cta .actions{
+        grid-column: 2;
+      }
+
+      .targetIcon,
+      .targetIcon svg{
+        width: 112px;
+        height: 112px;
+      }
+
+      .benefitStrip{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px){
+      .wrap{
+        padding: 16px;
+      }
+
+      nav{
+        justify-content:flex-start;
+        gap: 14px;
+      }
+
+      .pill{
+        border-left:0;
+        padding-left:0;
+      }
+
+      .productHero,
+      .heroContent{
+        min-height: auto;
+      }
+
+      .heroContent{
+        padding: 28px;
+      }
+
+      h1{
+        font-size: calc(42px * var(--scale));
+      }
+
+      .heroLead{
+        font-size: calc(19px * var(--scale));
+      }
+
+      .heroFlow{
+        min-height: 430px;
+      }
+
+      .flowCard{
+        position:relative;
+        top:auto !important;
+        left:auto !important;
+        right:auto !important;
+        bottom:auto !important;
+        margin-bottom: 14px;
+        width: 100%;
+      }
+
+      .flowLine{
+        display:none;
+      }
+
+      .infoItem{
+        grid-template-columns: 1fr;
+      }
+
+      .iconCircle{
+        width: 54px;
+        height: 54px;
+      }
+
+      .sideCard,
+      .videoBox{
+        padding: 22px;
+      }
+
+      .cta{
+        grid-template-columns: 1fr;
+        text-align:left;
+      }
+
+      .cta .actions{
+        grid-column:auto;
+      }
+
+      .targetIcon{
+        justify-content:flex-start;
+      }
+
+      .benefitStrip{
+        grid-template-columns: 1fr;
+      }
+
+      footer{
+        align-items:flex-start;
+      }
+
+      .footer-right{
+        margin-left:0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <header>
+        <a class="brand" href="../index.html" aria-label="Página inicial da IntareTech">
+          <img class="logo" src="../IntareTech_Horizontal_Cor.png" alt="IntareTech" />
+        </a>
+
+        <nav aria-label="Navegação principal">
+          <a class="navlink" href="../index.html#servicos">Serviços</a>
+          <a class="navlink" href="../index.html#produtos">Produtos</a>
+          <a class="navlink" href="../index.html#beneficios">Benefícios</a>
+          <a class="navlink" href="../index.html#contato">Contato</a>
+          <div class="pill"><span class="dot"></span> Produto ViaMonitor</div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="productHero" id="topo" aria-label="ViaMonitor">
+          <div class="heroContent">
+            <div>
+              <div class="eyebrow"><span></span> Produto IntareTech</div>
+              <img class="productLogoHero" src="images/viamonitor_logo.webp" alt="ViaMonitor" />
+              <h1>Controle do veículo no dia a dia</h1>
+              <p class="heroLead">Aplicativo prático e intuitivo para o motorista acompanhar tudo sobre seu veículo na palma da mão.</p>
+            </div>
+
+            <div class="heroFlow" aria-hidden="true">
+              <svg class="flowLine" viewBox="0 0 620 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M98 78 C184 78 196 144 286 144 C360 144 370 96 472 96" stroke="rgba(133,232,238,.54)" stroke-width="2" stroke-dasharray="6 8"/>
+                <path d="M300 162 C280 224 218 230 188 264" stroke="rgba(133,232,238,.45)" stroke-width="2" stroke-dasharray="6 8"/>
+                <path d="M398 132 C466 142 510 174 545 222" stroke="rgba(133,232,238,.38)" stroke-width="2" stroke-dasharray="6 8"/>
+                <circle cx="98" cy="78" r="6" fill="rgba(133,232,238,.9)"/>
+                <circle cx="286" cy="144" r="6" fill="rgba(133,232,238,.9)"/>
+                <circle cx="472" cy="96" r="6" fill="rgba(133,232,238,.9)"/>
+                <circle cx="188" cy="264" r="6" fill="rgba(133,232,238,.9)"/>
+              </svg>
+
+              <div class="flowCard abastecimentos">
+                <strong>Abastecimentos</strong>
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 8H42V56H18V8Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M24 16H36V28H24V16Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M42 20H50L54 26V48C54 52 51 54 48 54C45 54 42 52 42 48" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <div class="flowCard manutencoes">
+                <strong>Manutenções</strong>
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M42 8L50 16L38 28L46 36L36 46L28 38L16 50L8 42L20 30L12 22L22 12L30 20L42 8Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M38 28L28 38" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <div class="flowCard lembretes">
+                <strong>Lembretes</strong>
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 14H52V54H12V14Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M12 26H52M24 8V18M40 8V18M22 38H42M22 46H34" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <div class="flowCard alertas">
+                <strong>Alertas inteligentes</strong>
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 42V28C18 20 24 14 32 14C40 14 46 20 46 28V42L52 50H12L18 42Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M26 54C28 58 36 58 38 54" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M32 8V6" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="contentGrid">
+            <div class="infoList">
+              <article class="infoItem">
+                <div class="iconCircle" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="18" y="6" width="28" height="52" rx="5" stroke="currentColor" stroke-width="4"/>
+                    <path d="M26 48H38" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M24 20H40M24 30H40M24 40H34" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>O que é o ViaMonitor?</h3>
+                  <p>O ViaMonitor é um aplicativo prático e intuitivo para o motorista acompanhar tudo sobre seu veículo na palma da mão, reunindo abastecimentos, consumo, manutenções, despesas, vencimentos, histórico e alertas.</p>
+                </div>
+              </article>
+
+              <article class="infoItem">
+                <div class="iconCircle" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="10" width="16" height="16" rx="3" stroke="currentColor" stroke-width="4"/>
+                    <rect x="38" y="10" width="16" height="16" rx="3" stroke="currentColor" stroke-width="4"/>
+                    <rect x="10" y="38" width="16" height="16" rx="3" stroke="currentColor" stroke-width="4"/>
+                    <rect x="38" y="38" width="16" height="16" rx="3" stroke="currentColor" stroke-width="4"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>Como funciona?</h3>
+                  <p>O motorista registra abastecimentos, serviços, despesas, revisões e demais informações do veículo. O aplicativo organiza o histórico, acompanha custos e emite lembretes e alertas para apoiar o cuidado diário.</p>
+                </div>
+              </article>
+
+              <article class="infoItem">
+                <div class="iconCircle" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 6L54 14V29C54 44 45 56 32 60C19 56 10 44 10 29V14L32 6Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                    <path d="M22 32L29 39L43 24" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>Para quem é indicado?</h3>
+                  <p>É indicado para motoristas, proprietários de veículos, profissionais autônomos e pequenos operadores que desejam controlar melhor gastos, manutenções, consumo, vencimentos e histórico do próprio veículo.</p>
+                </div>
+              </article>
+            </div>
+
+            <aside class="sideCard" aria-label="Módulos do ViaMonitor">
+              <h2>Funções principais</h2>
+              <ul class="moduleList">
+                <li>
+                  <span class="moduleIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/>
+                      <path d="M20 36C22 28 26 24 32 24C38 24 42 28 44 36" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                      <path d="M32 32L42 22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span>Abastecimentos e consumo</span>
+                </li>
+
+                <li>
+                  <span class="moduleIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <path d="M42 8L50 16L38 28L46 36L36 46L28 38L16 50L8 42L20 30L12 22L22 12L30 20L42 8Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span>Manutenções e serviços</span>
+                </li>
+
+                <li>
+                  <span class="moduleIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <path d="M18 8H46V56H18V8Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                      <path d="M24 22H40M24 34H40M24 46H34" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                      <path d="M34 16V50" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span>Despesas e custos do veículo</span>
+                </li>
+
+                <li>
+                  <span class="moduleIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <path d="M12 14H52V54H12V14Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                      <path d="M12 26H52M24 8V18M40 8V18M22 38H42M22 46H34" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span>Lembretes de vencimentos e revisões</span>
+                </li>
+
+                <li>
+                  <span class="moduleIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <path d="M18 8H42L52 18V56H18V8Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                      <path d="M42 8V18H52M26 32H44M26 42H44M26 50H36" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span>Histórico completo do veículo</span>
+                </li>
+
+                <li>
+                  <span class="moduleIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <path d="M18 42V28C18 20 24 14 32 14C40 14 46 20 46 28V42L52 50H12L18 42Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                      <path d="M26 54C28 58 36 58 38 54" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span>Alertas e notificações inteligentes</span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="videoBox">
+            <h2>Veja a apresentação do ViaMonitor</h2>
+            <p>O vídeo apresenta a proposta do produto e ajuda a visualizar como o aplicativo pode apoiar o motorista no controle diário do veículo, dos custos e das manutenções.</p>
+            <div class="videoFrame">
+              <video src="videos/viamonitor_apresentacao.mp4" controls playsinline preload="metadata"></video>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="contractSection">
+            <article class="contractCard dark">
+              <h2>Controle simples para cuidar melhor do veículo</h2>
+              <p>O ViaMonitor foi pensado para transformar informações soltas sobre o veículo em um histórico organizado, ajudando o motorista a acompanhar custos, consumo, manutenções e vencimentos sem depender de anotações espalhadas.</p>
+              <ul class="checkList">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Registro de abastecimentos, consumo, despesas e serviços.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Lembretes para vencimentos, revisões e manutenções importantes.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Histórico completo para acompanhar a vida útil do veículo.</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="contractCard">
+              <h2>Indicado para quem quer previsibilidade e menos esquecimento</h2>
+              <p>Quando gastos, revisões, manutenções e vencimentos ficam sem controle, o motorista perde previsibilidade e pode ter custos desnecessários. O ViaMonitor centraliza essas informações em um aplicativo simples e direto.</p>
+              <ul class="checkList">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Ajuda a acompanhar quanto o veículo custa no dia a dia.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Evita perder prazos de revisão, documentação e serviços.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Organiza o histórico para consultas, venda futura ou manutenção preventiva.</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta">
+            <div class="targetIcon" aria-hidden="true">
+              <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="72" cy="88" r="54" fill="rgba(26,166,166,.15)"/>
+                <circle cx="72" cy="88" r="39" fill="rgba(255,255,255,.72)" stroke="rgba(26,166,166,.45)" stroke-width="8"/>
+                <circle cx="72" cy="88" r="20" fill="rgba(26,166,166,.22)" stroke="rgba(26,166,166,.70)" stroke-width="8"/>
+                <circle cx="72" cy="88" r="8" fill="#f07d18"/>
+                <path d="M72 88L120 40" stroke="#f07d18" stroke-width="7" stroke-linecap="round"/>
+                <path d="M118 41L142 34L135 58" fill="#f07d18"/>
+              </svg>
+            </div>
+
+            <div>
+              <h2>Quer conhecer o ViaMonitor?</h2>
+              <p>Envie seu contexto de uso, tipo de veículo e principais controles que deseja acompanhar. A IntareTech retorna com direcionamento e próximos passos.</p>
+            </div>
+
+            <div class="actions">
+              <a class="btn primary orange" href="mailto:contato@intaretech.com.br?subject=ViaMonitor%20-%20Demonstra%C3%A7%C3%A3o%20e%20an%C3%A1lise%20inicial&body=Ol%C3%A1%2C%20IntareTech.%0A%0AGostaria%20de%20conhecer%20melhor%20o%20ViaMonitor.%0A%0ANome%3A%0ATelefone%3A%0ATipo%20de%20ve%C3%ADculo%3A%0AResumo%20da%20necessidade%3A">Solicitar análise inicial</a>
+              <a class="btn" href="../index.html#produtos">Ver outros produtos</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="benefitStrip" aria-label="Benefícios do ViaMonitor">
+            <div class="benefitItem">
+              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/>
+                <path d="M20 36C22 28 26 24 32 24C38 24 42 28 44 36" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                <path d="M32 32L42 22" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <strong>Mais controle</strong>
+                <span>Abastecimentos, consumo e custos acompanhados.</span>
+              </div>
+            </div>
+
+            <div class="benefitItem">
+              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <path d="M42 8L50 16L38 28L46 36L36 46L28 38L16 50L8 42L20 30L12 22L22 12L30 20L42 8Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Mais cuidado</strong>
+                <span>Manutenções e serviços registrados em histórico.</span>
+              </div>
+            </div>
+
+            <div class="benefitItem">
+              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <path d="M12 14H52V54H12V14Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M12 26H52M24 8V18M40 8V18M22 38H42M22 46H34" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <strong>Mais previsibilidade</strong>
+                <span>Lembretes de vencimentos, revisões e prazos.</span>
+              </div>
+            </div>
+
+            <div class="benefitItem">
+              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <path d="M18 42V28C18 20 24 14 32 14C40 14 46 20 46 28V42L52 50H12L18 42Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M26 54C28 58 36 58 38 54" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <strong>Mais segurança</strong>
+                <span>Alertas para não esquecer manutenções e obrigações.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>www.intaretech.com.br</span>
+        <div class="footer-right">
+          <span>© <span id="y"></span></span>
+          <img class="footer-logo" src="../IntareTech_Horizontal.png" alt="IntareTech" />
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

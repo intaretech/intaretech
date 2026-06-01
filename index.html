@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>IntareTech | Desenvolvimento de Sistemas Corporativos e Automação de Processos</title>
-  <meta name="description" content="A IntareTech desenvolve sistemas corporativos sob medida, ERPs, plataformas web, sites, portais e soluções para automatizar processos, substituir planilhas e melhorar a gestão empresarial." />
+  <meta name="description" content="A IntareTech desenvolve sistemas corporativos sob medida, ERPs, plataformas web, sites, portais, automação de processos e soluções preparadas para evolução com recursos inteligentes quando fizer sentido para o negócio." />
   <meta name="google-site-verification" content="Iao3cxQ8CJH9CkKFdphfMw_QJ4s4j3N7eCOKnOVDqh4" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="IntareTech" />
@@ -16,13 +16,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="IntareTech" />
   <meta property="og:title" content="IntareTech | Desenvolvimento de Sistemas Corporativos" />
-  <meta property="og:description" content="Sistemas sob medida, ERPs, SaaS, sites, portais e automação de processos para empresas que precisam de mais controle, integração e eficiência." />
+  <meta property="og:description" content="Sistemas sob medida, ERPs, SaaS, sites, portais, automação de processos e tecnologia preparada para evolução com recursos inteligentes quando fizer sentido para o negócio." />
   <meta property="og:url" content="https://www.intaretech.com.br/" />
   <meta property="og:image" content="https://www.intaretech.com.br/IntareTech_Horizontal_Cor.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="IntareTech | Desenvolvimento de Sistemas Corporativos" />
-  <meta name="twitter:description" content="Sistemas corporativos sob medida, ERPs, SaaS, sites, portais e automação de processos para empresas." />
+  <meta name="twitter:description" content="Sistemas corporativos sob medida, ERPs, SaaS, sites, portais, automação de processos e soluções com possibilidade de evolução inteligente." />
   <meta name="twitter:image" content="https://www.intaretech.com.br/IntareTech_Horizontal_Cor.png" />
 
   <script type="application/ld+json">
@@ -44,7 +44,8 @@
           "Automação de processos",
           "Sites institucionais",
           "Portais corporativos",
-          "Consultoria em sistemas"
+          "Consultoria em sistemas",
+          "Inteligência artificial aplicada a processos"
         ],
         "contactPoint": {
           "@type": "ContactPoint",
@@ -81,7 +82,8 @@
           "Automação de processos empresariais",
           "Desenvolvimento de sites",
           "Portais corporativos",
-          "Consultoria em sistemas"
+          "Consultoria em sistemas",
+          "Inteligência artificial aplicada a processos"
         ]
       }
     ]
@@ -98,8 +100,9 @@
       --lineSoft: rgba(11,47,86,.14);
       --blue: rgb(11,47,86);
       --turq: #1aa6a6;
-      --strip-height: clamp(110px, 12vw, 190px);
-      --strip-speed: 28s;
+      --strip-height: 150px;
+      --strip-image-width: 2599px;
+      --strip-speed: 34s;
       --strip-fade: 64px;
       --radius: 14px;
       --card-bg: rgba(255,255,255,.26);
@@ -240,24 +243,26 @@
       position:absolute;
       inset: 0;
       display:flex;
-      width: 200%;
+      width: max-content;
+      height: 150px;
       will-change: transform;
       animation: stripMove var(--strip-speed) linear infinite;
     }
 
-    .stripLayer{
-      flex: 0 0 50%;
-      background-image: url("top_image_loop.webp");
-      background-repeat: repeat-x;
-      background-position: 0 50%;
-      background-size: auto 100%;
+    .stripImage{
+      flex: 0 0 var(--strip-image-width);
+      width: var(--strip-image-width);
+      height: 150px;
+      display:block;
+      object-fit: contain;
+      object-position: center;
       filter: saturate(1.02) contrast(1.02);
       opacity: .95;
     }
 
     @keyframes stripMove{
       from{ transform: translateX(0); }
-      to{ transform: translateX(-50%); }
+      to{ transform: translateX(calc(var(--strip-image-width) * -1)); }
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -320,6 +325,10 @@
       line-height: 1.65;
       max-width: 105ch;
       font-weight: 400;
+      text-align: justify;
+      text-align-last: left;
+      hyphens: auto;
+      overflow-wrap: break-word;
     }
 
     strong{ font-weight: 600; }
@@ -364,6 +373,9 @@
       font-size: calc(17px * var(--scale));
       line-height: 1.5;
       font-weight: 400;
+      text-align: justify;
+      text-align-last: left;
+      hyphens: auto;
     }
 
     .heroList li::before{
@@ -439,6 +451,111 @@
       gap: 12px;
     }
 
+    .serviceGroup{
+      display:flex;
+      flex-direction: column;
+      gap: 14px;
+      padding-top: 8px;
+    }
+
+    .serviceBlockTitle{
+      margin: 12px 0 2px;
+      color: rgba(10, 24, 36, .90);
+      font-size: calc(22px * var(--scale));
+      font-weight: 700;
+      line-height: 1.24;
+    }
+
+    .serviceCard{
+      min-height: 190px;
+      justify-content: space-between;
+    }
+
+    .aiServiceCard{
+      position: relative;
+      border: 2px solid rgba(26,166,166,.42);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.42), rgba(255,255,255,.22)),
+        radial-gradient(circle at 92% 12%, rgba(26,166,166,.24), transparent 34%),
+        radial-gradient(circle at 8% 88%, rgba(240,125,24,.14), transparent 30%);
+      box-shadow: 0 18px 38px rgba(0,0,0,.08);
+      overflow: hidden;
+    }
+
+    .aiServiceCard::before{
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--turq), #6fd6d6, #f07d18);
+    }
+
+    .aiBadge{
+      align-self: flex-start;
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      width: fit-content;
+      padding: 6px 11px;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(11,47,86,.96), rgba(26,166,166,.92));
+      box-shadow: 0 10px 20px rgba(0,0,0,.12);
+      font-size: calc(13px * var(--scale));
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .aiBadge::before{
+      content: "IA";
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      color: rgba(11,47,86,.96);
+      background: rgba(255,255,255,.92);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .aiServiceCard h3{
+      color: rgba(7, 42, 70, .98);
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    .aiServiceCard .serviceText{
+      color: rgba(10, 24, 36, .78);
+    }
+
+    .aiServiceCard .serviceText strong{
+      color: rgba(7, 42, 70, .98);
+      font-weight: 700;
+    }
+
+    .serviceText{
+      margin: 0;
+      color: rgba(10, 24, 36, .72);
+      font-size: calc(16px * var(--scale));
+      line-height: 1.62;
+      font-weight: 400;
+      text-align: justify;
+      text-align-last: left;
+      hyphens: auto;
+    }
+
+    a.btnMore{
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
     .serviceCard h3,
     .benefitCard h3{
       margin-bottom: 4px;
@@ -461,6 +578,9 @@
       line-height: 1.62;
       margin: 0;
       color: rgba(10, 24, 36, .72);
+      text-align: justify;
+      text-align-last: left;
+      hyphens: auto;
     }
 
     .serviceQuestion{
@@ -471,49 +591,71 @@
     }
 
     .productGrid{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      display:flex;
+      flex-direction: column;
+      gap: 14px;
       margin-top: 10px;
     }
 
     .productCard{
       display:flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
+      min-height: auto;
+      justify-content: flex-start;
+      padding: 14px 18px;
     }
 
     .productTop{
-      display:flex;
-      flex-direction: column;
-      gap: 12px;
+      display:grid;
+      grid-template-columns: 128px minmax(0, 1fr) auto;
+      grid-template-areas:
+        "logo title button"
+        "text text text";
+      align-items:center;
+      gap: 10px 18px;
+      height: auto;
     }
 
     .productTitle{
+      grid-area: title;
       margin: 0;
       color: rgba(10, 24, 36, .90);
-      font-weight: 500;
-      font-size: calc(17px * var(--scale));
-      line-height: 1.42;
+      font-weight: 700;
+      font-size: calc(18px * var(--scale));
+      line-height: 1.28;
       text-align: left;
+      letter-spacing: .01em;
     }
 
     .productLogoWrap{
+      grid-area: logo;
       display:flex;
       justify-content:center;
       align-items:center;
-      padding-top: 4px;
+      padding: 6px 10px;
+      min-height: 78px;
+      border-radius: calc(var(--radius) - 4px);
+      background: rgba(255,255,255,.22);
+      border: 1px solid rgba(11,47,86,.08);
     }
 
     .productLogoStd{
-      width: 200px;
-      height: auto;
+      width: auto;
+      max-width: 108px;
+      height: 52px;
+      object-fit: contain;
       display:block;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,.08));
+      filter: drop-shadow(0 8px 14px rgba(0,0,0,.08));
     }
 
     .btnMore{
       align-self:center;
+      margin-top: auto;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background: var(--btn-bg);
       color: var(--btn-text);
       border: 0;
@@ -540,6 +682,15 @@
       filter: brightness(.98);
     }
 
+    .productTop > .btnMore{
+      grid-area: button;
+      align-self:center;
+      justify-self:end;
+      margin-top: 0;
+      min-width: 128px;
+      padding: 11px 18px;
+    }
+
     .productMore{
       margin-top: 6px;
       padding-top: 12px;
@@ -552,11 +703,15 @@
     .productMore.open{ display:flex; }
 
     .productMoreText{
+      grid-area: text;
       margin: 0;
       color: rgba(10, 24, 36, .72);
       font-size: calc(16px * var(--scale));
-      line-height: 1.65;
+      line-height: 1.62;
       font-weight: 400;
+      text-align: justify;
+      text-align-last: left;
+      hyphens: auto;
     }
 
     .productMedia{
@@ -648,7 +803,6 @@
     }
 
     @media (max-width: 1300px){
-      .productGrid,
       .grid3{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
@@ -656,10 +810,19 @@
       nav{ justify-content:flex-start; }
       .strip::before,
       .strip::after{ width: 42px; }
-      .productGrid,
       .grid3,
       .heroList{ grid-template-columns: 1fr; }
-      .productLogoStd{ width: 220px; }
+      .productTop{
+        grid-template-columns: 104px minmax(0, 1fr);
+        grid-template-areas:
+          "logo title"
+          "text text"
+          "button button";
+        align-items:center;
+      }
+      .productLogoWrap{ min-height: 68px; }
+      .productLogoStd{ max-width: 92px; height: 44px; }
+      .productTop > .btnMore{ justify-self:flex-start; }
       .sectionTitle{ font-size: calc(26px * var(--scale)); }
       h1,
       h2{ font-size: calc(24px * var(--scale)); }
@@ -687,8 +850,8 @@
 
       <section class="strip" aria-label="Faixa panorâmica institucional em loop">
         <div class="stripTrack">
-          <div class="stripLayer"></div>
-          <div class="stripLayer"></div>
+          <img class="stripImage" src="top_image_loop.webp" alt="" aria-hidden="true">
+          <img class="stripImage" src="top_image_loop.webp" alt="" aria-hidden="true">
         </div>
       </section>
 
@@ -724,154 +887,174 @@
             <p class="sectionTitle">Serviços</p>
             <h2>O que a IntareTech desenvolve</h2>
             <p>
-              Atuamos na criação de soluções digitais para empresas, profissionais, pequenos negócios, grandes corporações e instituições que precisam substituir processos manuais por sistemas organizados, seguros e preparados para crescer.
+              A IntareTech atua como parceira técnica para empresas que precisam de tecnologia, mas não querem depender apenas da contratação direta de um programador. Entregamos análise, planejamento, desenvolvimento e evolução de soluções digitais para melhorar processos, presença online e gestão, incluindo uso de IA quando ela realmente agrega valor ao negócio.
             </p>
           </div>
 
-          <div class="grid3">
-            <article class="serviceCard">
-              <h3>Sistemas sob medida</h3>
-              <button class="btnMore" type="button" aria-expanded="false" aria-controls="more-sistemas">Você conhece um sistema sob medida?</button>
-              <div class="serviceMore" id="more-sistemas">
-                <p><strong>O que é um sistema sob medida?</strong> É um sistema desenvolvido conforme a rotina, as regras e os processos específicos de uma empresa.</p>
-                <p><strong>Como funciona?</strong> Primeiro são analisadas as necessidades do negócio. Depois são definidos os módulos, cadastros, permissões, relatórios, fluxos e integrações que o sistema precisa ter.</p>
-                <p class="serviceQuestion">Minha empresa precisa de um?</p>
-                <p>Empresas que dependem de muitas planilhas, controles manuais, retrabalho, conferências repetidas ou informações espalhadas costumam se beneficiar muito de um sistema próprio.</p>
-              </div>
-            </article>
+          <div class="serviceGroup" aria-label="Consultoria, automação e sistemas">
+            <h3 class="serviceBlockTitle">Consultoria, processos e sistemas sob medida</h3>
 
-            <article class="serviceCard">
-              <h3>ERP personalizado</h3>
-              <button class="btnMore" type="button" aria-expanded="false" aria-controls="more-erp">Você conhece um ERP?</button>
-              <div class="serviceMore" id="more-erp">
-                <p><strong>O que é um ERP?</strong> Um ERP, Enterprise Resource Planning, é um sistema de gestão empresarial que reúne processos importantes da empresa em uma única plataforma.</p>
-                <p><strong>Como funciona?</strong> Ele organiza módulos como cadastros, operações, financeiro, estoque, usuários, relatórios, aprovações e outros setores conforme a necessidade do negócio.</p>
-                <p class="serviceQuestion">Minha empresa precisa de um?</p>
-                <p>Um ERP é indicado quando a empresa precisa centralizar informações, reduzir controles paralelos, melhorar a rastreabilidade e ter visão gerencial sobre suas rotinas.</p>
-              </div>
-            </article>
+            <div class="grid3">
+              <article class="serviceCard aiServiceCard">
+                <div class="aiBadge">Inteligência aplicada</div>
+                <h3>Consultoria em sistemas</h3>
+                <p class="serviceText">
+                  <strong>IA desde o diagnóstico:</strong> análise técnica e funcional para identificar onde inteligência artificial, automações, alertas e análise de dados podem gerar ganho real antes de desenvolver a solução.
+                </p>
+                <a class="btnMore" href="servicos/consultoria.html">Saiba mais</a>
+              </article>
 
-            <article class="serviceCard">
-              <h3>SaaS</h3>
-              <button class="btnMore" type="button" aria-expanded="false" aria-controls="more-saas">Você conhece um SaaS?</button>
-              <div class="serviceMore" id="more-saas">
-                <p><strong>O que é um SaaS?</strong> SaaS, Software as a Service, é um sistema oferecido pela internet, geralmente acessado pelo navegador, sem instalação individual em cada computador.</p>
-                <p><strong>Como funciona?</strong> O cliente acessa a plataforma online, utiliza os recursos contratados e recebe melhorias contínuas sem precisar administrar toda a infraestrutura técnica.</p>
-                <p class="serviceQuestion">Minha empresa precisa de um?</p>
-                <p>O modelo SaaS é indicado para empresas que precisam de acesso online, expansão gradual, uso por diferentes equipes e menor dependência de instalação local.</p>
-              </div>
-            </article>
+              <article class="serviceCard aiServiceCard">
+                <div class="aiBadge">Automação com IA</div>
+                <h3>Automação de processos</h3>
+                <p class="serviceText">
+                  <strong>IA para reduzir trabalho repetitivo:</strong> automações que podem evoluir com classificação de informações, identificação de padrões, alertas inteligentes e apoio à decisão.
+                </p>
+                <a class="btnMore" href="servicos/automacao.html">Saiba mais</a>
+              </article>
 
-            <article class="serviceCard">
-              <h3>Automação de processos</h3>
-              <button class="btnMore" type="button" aria-expanded="false" aria-controls="more-automacao">Você conhece automação de processos?</button>
-              <div class="serviceMore" id="more-automacao">
-                <p><strong>O que é automação de processos?</strong> É a transformação de tarefas repetitivas, manuais ou desorganizadas em fluxos digitais mais rápidos, padronizados e controláveis.</p>
-                <p><strong>Como funciona?</strong> Rotinas como cadastros, aprovações, notificações, relatórios, conferências e movimentações passam a seguir regras automáticas dentro de um sistema.</p>
-                <p class="serviceQuestion">Minha empresa precisa disso?</p>
-                <p>Empresas com retrabalho, perda de informações, excesso de controles manuais ou demora para executar rotinas internas podem ganhar produtividade com automação.</p>
-              </div>
-            </article>
+              <article class="serviceCard aiServiceCard">
+                <div class="aiBadge">Sistemas inteligentes</div>
+                <h3>Sistemas sob medida</h3>
+                <p class="serviceText">
+                  <strong>Sistemas preparados para IA:</strong> desenvolvimento sob medida com estrutura para incorporar busca inteligente, assistentes internos, recomendações, análise de dados e alertas preditivos.
+                </p>
+                <a class="btnMore" href="servicos/sistemas.html">Saiba mais</a>
+              </article>
+            </div>
+          </div>
 
-            <article class="serviceCard">
-              <h3>Sites</h3>
-              <button class="btnMore" type="button" aria-expanded="false" aria-controls="more-sites">Você conhece a função de um site?</button>
-              <div class="serviceMore" id="more-sites">
-                <p><strong>O que é um site?</strong> É a presença digital principal de uma empresa, profissional, produto ou serviço na internet.</p>
-                <p><strong>Como funciona?</strong> Ele apresenta informações essenciais, serviços, diferenciais, canais de contato, imagens, textos institucionais e chamadas comerciais para o público certo.</p>
-                <p class="serviceQuestion">Minha empresa precisa de um?</p>
-                <p>Empresas que desejam ser encontradas no Google, transmitir credibilidade, apresentar serviços e receber contatos comerciais precisam de um site bem estruturado.</p>
-              </div>
-            </article>
+          <div class="serviceGroup" aria-label="Sites e portais">
+            <h3 class="serviceBlockTitle">Presença digital e ambientes online</h3>
 
-            <article class="serviceCard">
-              <h3>Portais</h3>
-              <button class="btnMore" type="button" aria-expanded="false" aria-controls="more-portais">Você conhece um portal corporativo?</button>
-              <div class="serviceMore" id="more-portais">
-                <p><strong>O que é um portal?</strong> É um ambiente online mais amplo que um site comum, usado para organizar acessos, documentos, serviços, informações e áreas restritas.</p>
-                <p><strong>Como funciona?</strong> Um portal pode reunir conteúdos públicos e privados, login de usuários, formulários, comunicados, arquivos, painéis, solicitações e informações segmentadas.</p>
-                <p class="serviceQuestion">Minha empresa precisa de um?</p>
-                <p>Portais são indicados para empresas, instituições, equipes, clientes, fornecedores ou públicos que precisam acessar informações organizadas em um ambiente único.</p>
-              </div>
-            </article>
+            <div class="grid3">
+              <article class="serviceCard">
+                <h3>Sites</h3>
+                <p class="serviceText">
+                  Criação de presença digital profissional para empresas que precisam ser encontradas, apresentar serviços, transmitir credibilidade e receber contatos.
+                </p>
+                <a class="btnMore" href="servicos/sites.html">Saiba mais</a>
+              </article>
 
-            <article class="serviceCard">
-              <h3>Consultoria em sistemas</h3>
-              <button class="btnMore" type="button" aria-expanded="false" aria-controls="more-consultoria">Você conhece consultoria em sistemas?</button>
-              <div class="serviceMore" id="more-consultoria">
-                <p><strong>O que é consultoria em sistemas?</strong> É a análise técnica e funcional de processos para entender quais soluções digitais fazem sentido antes de iniciar o desenvolvimento.</p>
-                <p><strong>Como funciona?</strong> São avaliados os problemas atuais, os usuários envolvidos, as regras de negócio, os dados, os módulos necessários e o melhor caminho técnico para implementação.</p>
-                <p class="serviceQuestion">Minha empresa precisa disso?</p>
-                <p>É indicada quando a empresa sabe que precisa melhorar processos, mas ainda não tem clareza sobre qual sistema desenvolver, quais módulos priorizar ou como organizar o projeto.</p>
-              </div>
-            </article>
+              <article class="serviceCard">
+                <h3>Portais</h3>
+                <p class="serviceText">
+                  Desenvolvimento de ambientes online para organizar acessos, documentos, formulários, comunicados, arquivos, áreas restritas e informações segmentadas.
+                </p>
+                <a class="btnMore" href="servicos/portais.html">Saiba mais</a>
+              </article>
+            </div>
+          </div>
+
+          <div class="serviceGroup" aria-label="ERPs e SaaS">
+            <h3 class="serviceBlockTitle">Gestão integrada e plataformas escaláveis</h3>
+
+            <div class="grid3">
+              <article class="serviceCard">
+                <h3>ERPs</h3>
+                <p class="serviceText">
+                  Sistemas de gestão empresarial para centralizar cadastros, operações, financeiro, usuários, relatórios, aprovações e rotinas importantes da empresa.
+                </p>
+                <a class="btnMore" href="servicos/erps.html">Saiba mais</a>
+              </article>
+
+              <article class="serviceCard">
+                <h3>SaaS</h3>
+                <p class="serviceText">
+                  Plataformas online acessadas pelo navegador, com operação escalável, evolução contínua e menor dependência de instalação ou infraestrutura local.
+                </p>
+                <a class="btnMore" href="servicos/saas.html">Saiba mais</a>
+              </article>
+            </div>
           </div>
         </section>
+
 
         <section class="section stack" id="produtos">
           <div>
             <p class="sectionTitle">Produtos</p>
-            <h2>Soluções próprias em desenvolvimento</h2>
+            <h2>Soluções próprias da IntareTech</h2>
             <p>
-              Além de projetos sob medida, a IntareTech desenvolve produtos próprios voltados à gestão empresarial, institucional e operacional.
+              Além de projetos sob medida, a IntareTech desenvolve produtos próprios para rotinas específicas de gestão empresarial, institucional, bibliotecária, pública, operacional e veicular. Cada produto possui uma página dedicada, com apresentação, módulos, vídeo e informações comerciais.
             </p>
           </div>
 
           <div class="productGrid">
             <article class="productCard" data-product="signhor">
               <div class="productTop">
-                <h3 class="productTitle">Sistema integrado de gestão de pessoas, folha de pagamento e marcação de ponto digital.</h3>
+                <h3 class="productTitle">SIGN'HOR — GESTÃO DE PESSOAS, FOLHA E PONTO DIGITAL</h3>
                 <div class="productLogoWrap">
-                  <img class="productLogoStd" src="signhor_logo.webp" alt="Sign'hor">
+                  <img class="productLogoStd" src="produtos/images/signhor_logo.webp" alt="Sign'hor">
                 </div>
-                <button class="btnMore" type="button" aria-expanded="false" aria-controls="more-signhor">Saiba mais</button>
-              </div>
-
-              <div class="productMore" id="more-signhor">
                 <p class="productMoreText">
-                  O Sign'hor é uma solução SaaS para rotinas de Recursos Humanos e Financeiro, com ponto digital, banco de horas, solicitações, análises, cadastros, relatórios e organização de dados para apoio à gestão.
+                  Solução SaaS para RH e Financeiro, com ponto digital, banco de horas, solicitações, análises, cadastros, relatórios e apoio à gestão.
                 </p>
-                <div class="productMedia">
-                  <video class="productVideo" src="Signhor_Apresentacao.mp4" controls playsinline preload="metadata"></video>
-                </div>
-              </div>
-            </article>
-
-            <article class="productCard" data-product="legore">
-              <div class="productTop">
-                <h3 class="productTitle">Sistema integrado de gestão de bibliotecas.</h3>
-                <div class="productLogoWrap">
-                  <img class="productLogoStd" src="legore_logo.webp" alt="Legore">
-                </div>
-                <button class="btnMore" type="button" aria-expanded="false" aria-controls="more-legore">Saiba mais</button>
-              </div>
-
-              <div class="productMore" id="more-legore">
-                <p class="productMoreText">
-                  Controle de acervo, usuários, empréstimos, devoluções e atendimento. Indicado para escolas, instituições públicas, bibliotecas privadas e organizações que precisam administrar patrimônio bibliográfico.
-                </p>
-                <div class="productMedia">
-                  <div class="mediaPlaceholder">Imagens e/ou vídeo em breve</div>
-                </div>
+                <a class="btnMore" href="produtos/signhor.html">Saiba mais</a>
               </div>
             </article>
 
             <article class="productCard" data-product="deker">
               <div class="productTop">
-                <h3 class="productTitle">Sistema integrado de gestão de custodiados.</h3>
+                <h3 class="productTitle">DEKER — GESTÃO INTEGRADA DE CUSTODIADOS</h3>
                 <div class="productLogoWrap">
-                  <img class="productLogoStd" src="deker_logo.webp" alt="DEKER">
+                  <img class="productLogoStd" src="produtos/images/deker_logo.webp" alt="DEKER">
                 </div>
-                <button class="btnMore" type="button" aria-expanded="false" aria-controls="more-deker">Saiba mais</button>
-              </div>
-
-              <div class="productMore" id="more-deker">
                 <p class="productMoreText">
-                  Gestão institucional com foco em padronização, segurança operacional, rastreabilidade, histórico de movimentações, organização de rotinas e estrutura preparada para expansão por módulos e auditoria.
+                  Sistema institucional para cadastro, vínculo, movimentações, atendimentos, relatórios, histórico operacional, permissões de acesso e rastreabilidade.
                 </p>
-                <div class="productMedia">
-                  <div class="mediaPlaceholder">Imagens e/ou vídeo em breve</div>
+                <a class="btnMore" href="produtos/deker.html">Saiba mais</a>
+              </div>
+            </article>
+
+            <article class="productCard" data-product="legore">
+              <div class="productTop">
+                <h3 class="productTitle">LEGORE — GESTÃO INTEGRADA DE BIBLIOTECAS</h3>
+                <div class="productLogoWrap">
+                  <img class="productLogoStd" src="produtos/images/legore_logo.webp" alt="Legore">
                 </div>
+                <p class="productMoreText">
+                  SIGB para gerenciar leitores, bibliotecários, livros, exemplares, empréstimos, devoluções, reservas, aluguéis, acervos, categorias, circulação e relatórios.
+                </p>
+                <a class="btnMore" href="produtos/legore.html">Saiba mais</a>
+              </div>
+            </article>
+
+            <article class="productCard" data-product="administra">
+              <div class="productTop">
+                <h3 class="productTitle">ADMINISTRA — GESTÃO PÚBLICA INTEGRADA</h3>
+                <div class="productLogoWrap">
+                  <img class="productLogoStd" src="produtos/images/administra_logo.webp" alt="Administra">
+                </div>
+                <p class="productMoreText">
+                  Sistema integrado para administração pública, conectando processos, pessoas e informações em uma única plataforma para planejamento, orçamento, finanças, compras, contratos, RH, folha, transparência e controle.
+                </p>
+                <a class="btnMore" href="produtos/administra.html">Saiba mais</a>
+              </div>
+            </article>
+
+            <article class="productCard" data-product="viaregia">
+              <div class="productTop">
+                <h3 class="productTitle">VIAREGIA — GESTÃO DE FROTAS E OPERAÇÃO</h3>
+                <div class="productLogoWrap">
+                  <img class="productLogoStd" src="produtos/images/viaregia_logo.webp" alt="ViaRegia">
+                </div>
+                <p class="productMoreText">
+                  Solução completa para gestão de frotas, com cadastro de veículos e motoristas, manutenção preventiva e corretiva, abastecimentos, despesas, rotas, viagens, indicadores, segurança e conformidade.
+                </p>
+                <a class="btnMore" href="produtos/viaregia.html">Saiba mais</a>
+              </div>
+            </article>
+
+            <article class="productCard" data-product="viamonitor">
+              <div class="productTop">
+                <h3 class="productTitle">VIAMONITOR — CONTROLE DO VEÍCULO NO DIA A DIA</h3>
+                <div class="productLogoWrap">
+                  <img class="productLogoStd" src="produtos/images/viamonitor_logo.webp" alt="ViaMonitor">
+                </div>
+                <p class="productMoreText">
+                  Aplicativo prático e intuitivo para o motorista acompanhar abastecimentos, consumo, manutenções, serviços, despesas, vencimentos, revisões, histórico completo e alertas inteligentes.
+                </p>
+                <a class="btnMore" href="produtos/viamonitor.html">Saiba mais</a>
               </div>
             </article>
           </div>
@@ -930,18 +1113,6 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-
-    document.querySelectorAll(".btnMore").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const id = btn.getAttribute("aria-controls");
-        const panel = document.getElementById(id);
-        if (!panel) return;
-
-        const isOpen = panel.classList.contains("open");
-        panel.classList.toggle("open", !isOpen);
-        btn.setAttribute("aria-expanded", String(!isOpen));
-      });
-    });
   </script>
 </body>
 </html>

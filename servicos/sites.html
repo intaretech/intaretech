@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sites Profissionais | IntareTech</title>
+  <meta name="description" content="Criação de sites profissionais para empresas que precisam ser encontradas, apresentar serviços com credibilidade e receber contatos comerciais pela internet." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="author" content="IntareTech" />
+  <meta name="theme-color" content="#0b2f56" />
+  <link rel="canonical" href="https://www.intaretech.com.br/servicos/sites.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IntareTech" />
+  <meta property="og:title" content="Sites Profissionais | IntareTech" />
+  <meta property="og:description" content="Sites institucionais para empresas que precisam de presença digital, credibilidade e geração de contatos." />
+  <meta property="og:url" content="https://www.intaretech.com.br/servicos/sites.html" />
+  <meta property="og:image" content="https://www.intaretech.com.br/servicos/images/sites.webp" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sites Profissionais | IntareTech" />
+  <meta name="twitter:description" content="Sites institucionais para empresas que precisam de presença digital, credibilidade e geração de contatos." />
+  <meta name="twitter:image" content="https://www.intaretech.com.br/servicos/images/sites.webp" />
+
+  <style>
+    :root{
+      --scale: 1;
+      --bg: #d6dde2;
+      --text: rgba(10, 24, 36, .94);
+      --muted: rgba(10, 24, 36, .72);
+      --line: rgba(11,47,86,.22);
+      --lineSoft: rgba(11,47,86,.14);
+      --blue: rgb(11,47,86);
+      --turq: #1aa6a6;
+      --orange: #f07d18;
+      --radius: 16px;
+      --card-border: rgba(11,47,86,.14);
+      --btn-bg: rgba(11,47,86,.92);
+      --btn-text: rgba(255,255,255,.96);
+      --btn-cut: 14px;
+    }
+
+    *{ box-sizing: border-box; }
+
+    html{ scroll-behavior: smooth; }
+
+    html,
+    body{ min-height: 100%; }
+
+    body{
+      margin:0;
+      font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      font-weight: 400;
+    }
+
+    .wrap{
+      min-height: 100%;
+      display:flex;
+      justify-content:center;
+      padding: clamp(18px, 3.5vw, 44px);
+    }
+
+    .container{ width: min(1700px, 96vw); }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+      min-width: 220px;
+      text-decoration:none;
+    }
+
+    .logo{
+      height: clamp(56px, 6.1vw, 86px);
+      width: auto;
+      display:block;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.10));
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+
+    a.navlink{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 2px;
+      text-decoration:none;
+      color: rgba(10, 24, 36, .90);
+      font-weight: 700;
+      font-size: calc(16px * var(--scale));
+      letter-spacing: .1px;
+      border-bottom: 2px solid transparent;
+      transition: transform .12s ease, border-color .12s ease, opacity .12s ease;
+      white-space: nowrap;
+    }
+
+    a.navlink:hover,
+    a.navlink:focus-visible{
+      transform: translateY(-1px);
+      border-color: rgba(26,166,166,.45);
+      opacity: .92;
+      outline: none;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 12px 10px 18px;
+      color: rgba(10, 24, 36, .72);
+      font-size: calc(15px * var(--scale));
+      font-weight: 600;
+      white-space: nowrap;
+      border-left: 1px solid var(--lineSoft);
+      margin-left: 2px;
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background: var(--turq);
+      box-shadow: 0 0 0 4px rgba(26,166,166,.14);
+    }
+
+    .serviceHero{
+      position:relative;
+      min-height: 420px;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.28);
+      background:
+        linear-gradient(90deg, rgba(5,28,49,.94) 0%, rgba(7,42,70,.86) 42%, rgba(7,42,70,.50) 72%, rgba(7,42,70,.30) 100%),
+        url("images/sites.webp") center / cover no-repeat;
+      box-shadow: 0 24px 54px rgba(0,0,0,.16);
+      isolation:isolate;
+    }
+
+    .serviceHero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 72% 46%, rgba(26,166,166,.34), transparent 34%),
+        radial-gradient(circle at 88% 72%, rgba(240,125,24,.18), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+      z-index:0;
+    }
+
+    .serviceHero::after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0 0;
+      height: 110px;
+      background: linear-gradient(0deg, rgba(5,28,49,.42), transparent);
+      z-index:0;
+    }
+
+    .heroContent{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns: minmax(0, .9fr) minmax(420px, .8fr);
+      gap: 32px;
+      min-height: 420px;
+      align-items:center;
+      padding: clamp(28px, 5vw, 72px);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      color: rgba(255,255,255,.88);
+      font-size: calc(15px * var(--scale));
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow span{
+      width: 10px;
+      height: 10px;
+      border-radius:50%;
+      background: var(--turq);
+      box-shadow: 0 0 0 5px rgba(26,166,166,.18);
+    }
+
+    h1{
+      margin:0;
+      color: #fff;
+      font-size: calc(clamp(42px, 5.2vw, 76px) * var(--scale));
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 700;
+      max-width: 11ch;
+    }
+
+    .heroLead{
+      margin: 22px 0 0;
+      color: rgba(255,255,255,.88);
+      font-size: calc(22px * var(--scale));
+      line-height: 1.45;
+      max-width: 35ch;
+    }
+
+    .heroFlow{
+      position:relative;
+      min-height: 300px;
+    }
+
+    .flowCard{
+      position:absolute;
+      min-width: 178px;
+      padding: 15px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(133,232,238,.28);
+      background: rgba(7,39,66,.62);
+      box-shadow: 0 18px 34px rgba(0,0,0,.20), inset 0 1px 0 rgba(255,255,255,.10);
+      backdrop-filter: blur(8px);
+      animation: floatCard 8s ease-in-out infinite;
+    }
+
+    .flowCard:nth-child(2){ animation-delay: .5s; }
+    .flowCard:nth-child(3){ animation-delay: 1s; }
+    .flowCard:nth-child(4){ animation-delay: 1.5s; }
+
+    .flowCard strong{
+      display:block;
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .flowCard svg{
+      width: 46px;
+      height: 46px;
+      color: rgba(133,232,238,.95);
+    }
+
+    .flowCard.presenca{ top: 8px; left: 0; }
+
+    .flowCard.conteudo{
+      top: 92px;
+      left: 198px;
+      min-width: 202px;
+      transform: scale(1.05);
+      border-color: rgba(133,232,238,.45);
+      background: rgba(10,82,116,.64);
+    }
+
+    .flowCard.contato{ top: 64px; right: 26px; }
+
+    .flowCard.credibilidade{
+      bottom: 0;
+      left: 88px;
+      min-width: 230px;
+    }
+
+    .flowLine{
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      opacity:.86;
+    }
+
+    @keyframes floatCard{
+      0%, 100%{ transform: translateY(0); }
+      50%{ transform: translateY(-80px); }
+    }
+
+    .section{
+      padding: 34px 0;
+      border-bottom: 1px solid var(--lineSoft);
+    }
+
+    .section:last-of-type{ border-bottom: none; }
+
+    .contentGrid{
+      display:grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(360px, .75fr);
+      gap: clamp(22px, 4vw, 64px);
+      align-items:start;
+    }
+
+    .infoList{
+      display:flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .infoItem{
+      display:grid;
+      grid-template-columns: 76px minmax(0, 1fr);
+      gap: 18px;
+      padding: 26px 0;
+      border-bottom: 1px solid rgba(11,47,86,.13);
+    }
+
+    .infoItem:first-child{ padding-top: 4px; }
+
+    .infoItem:last-child{ border-bottom: none; }
+
+    .iconCircle{
+      width: 58px;
+      height: 58px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: var(--blue);
+      border: 2px solid rgba(26,166,166,.70);
+      background: rgba(255,255,255,.30);
+      box-shadow: 0 10px 20px rgba(0,0,0,.05);
+    }
+
+    .iconCircle svg{
+      width: 31px;
+      height: 31px;
+    }
+
+    h2{
+      margin:0 0 12px;
+      color: rgba(10,24,36,.97);
+      font-size: calc(clamp(27px, 3vw, 38px) * var(--scale));
+      line-height: 1.14;
+      letter-spacing: -.035em;
+      font-weight: 700;
+    }
+
+    h3{
+      margin:0 0 10px;
+      color: rgba(10,24,36,.94);
+      font-size: calc(25px * var(--scale));
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    p{
+      margin:0 0 14px;
+      color: var(--muted);
+      font-size: calc(19px * var(--scale));
+      line-height: 1.62;
+      max-width: 92ch;
+      font-weight: 400;
+    }
+
+    .sideCard{
+      border: 1px solid var(--card-border);
+      background: rgba(255,255,255,.42);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 20px 42px rgba(0,0,0,.08);
+    }
+
+    .sideCard h2{
+      font-size: calc(31px * var(--scale));
+      margin-bottom: 18px;
+    }
+
+    .evalList{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .evalList li{
+      display:grid;
+      grid-template-columns: 54px minmax(0,1fr);
+      gap: 14px;
+      align-items:center;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(11,47,86,.10);
+      color: rgba(10,24,36,.82);
+      font-size: calc(19px * var(--scale));
+      line-height: 1.32;
+      font-weight: 600;
+    }
+
+    .evalList li:last-child{ border-bottom:none; }
+
+    .evalIcon{
+      width: 42px;
+      height: 42px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: var(--turq);
+    }
+
+    .evalIcon svg{
+      width: 34px;
+      height: 34px;
+    }
+
+    .contractSection{
+      display:grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1fr);
+      gap: 26px;
+      align-items:stretch;
+    }
+
+    .contractCard{
+      border: 1px solid var(--card-border);
+      background: rgba(255,255,255,.38);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 18px 38px rgba(0,0,0,.06);
+    }
+
+    .contractCard.dark{
+      background: linear-gradient(135deg, rgba(11,47,86,.95), rgba(7,76,99,.92));
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .contractCard.dark::before{
+      content:"";
+      position:absolute;
+      width: 220px;
+      height: 220px;
+      border-radius:50%;
+      right:-84px;
+      top:-86px;
+      background: rgba(26,166,166,.20);
+    }
+
+    .contractCard.dark::after{
+      content:"";
+      position:absolute;
+      width: 180px;
+      height: 180px;
+      border-radius:50%;
+      left:-78px;
+      bottom:-82px;
+      background: rgba(240,125,24,.15);
+    }
+
+    .contractCard.dark h2,
+    .contractCard.dark p{
+      position:relative;
+      z-index:1;
+      color:#fff;
+    }
+
+    .contractCard.dark p{ color: rgba(255,255,255,.82); }
+
+    .checkList{
+      list-style:none;
+      padding:0;
+      margin: 18px 0 0;
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+    }
+
+    .checkList li{
+      display:flex;
+      gap: 12px;
+      color: rgba(10,24,36,.76);
+      font-size: calc(17px * var(--scale));
+      line-height: 1.48;
+    }
+
+    .contractCard.dark .checkList li{ color: rgba(255,255,255,.84); }
+
+    .checkList svg{
+      flex: 0 0 23px;
+      width: 23px;
+      height: 23px;
+      color: var(--turq);
+      margin-top: 1px;
+    }
+
+    .cta{
+      display:grid;
+      grid-template-columns: 160px minmax(0, 1fr) auto;
+      gap: 26px;
+      align-items:center;
+      border: 1px solid rgba(11,47,86,.16);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.54), rgba(255,255,255,.28)),
+        radial-gradient(circle at 92% 50%, rgba(26,166,166,.14), transparent 30%);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 18px 38px rgba(0,0,0,.06);
+    }
+
+    .targetIcon{
+      width: 132px;
+      height: 132px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .targetIcon svg{
+      width: 132px;
+      height: 132px;
+    }
+
+    .cta h2{ margin-bottom: 8px; }
+
+    .actions{
+      display:flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 10px 0;
+      text-decoration:none;
+      color: rgba(10, 24, 36, .90);
+      font-weight: 700;
+      font-size: calc(17px * var(--scale));
+      border-bottom: 2px solid rgba(26,166,166,.22);
+      transition: transform .12s ease, border-color .12s ease, opacity .12s ease, filter .12s ease;
+      white-space: nowrap;
+    }
+
+    a.btn:hover,
+    a.btn:focus-visible{
+      transform: translateY(-1px);
+      border-color: rgba(26,166,166,.52);
+      opacity: .94;
+      outline: none;
+    }
+
+    a.btn.primary{
+      color: var(--btn-text);
+      background: var(--btn-bg);
+      border: 0;
+      padding: 13px 22px;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--btn-cut)), calc(100% - var(--btn-cut)) 100%, 0 100%);
+      box-shadow: 0 12px 22px rgba(0,0,0,.14);
+    }
+
+    a.btn.orange{ background: var(--orange); }
+
+    .benefitStrip{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .benefitItem{
+      display:grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 12px;
+      align-items:center;
+      border: 1px solid rgba(11,47,86,.12);
+      background: rgba(255,255,255,.30);
+      border-radius: 13px;
+      padding: 16px;
+    }
+
+    .benefitItem svg{
+      width: 38px;
+      height: 38px;
+      color: var(--blue);
+      opacity:.86;
+    }
+
+    .benefitItem strong{
+      display:block;
+      color: rgba(10,24,36,.88);
+      font-size: calc(16px * var(--scale));
+      line-height:1.2;
+      margin-bottom: 3px;
+    }
+
+    .benefitItem span{
+      display:block;
+      color: rgba(10,24,36,.62);
+      font-size: calc(14px * var(--scale));
+      line-height:1.25;
+    }
+
+    footer{
+      margin-top: 18px;
+      padding: 14px 0 0;
+      border-top: 1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: rgba(10, 24, 36, .62);
+      font-size: calc(14px * var(--scale));
+    }
+
+    .footer-right{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      margin-left:auto;
+    }
+
+    .footer-logo{
+      height: 18px;
+      width: auto;
+      display:block;
+      opacity: .92;
+      filter: drop-shadow(0 6px 10px rgba(0,0,0,.08));
+    }
+
+    @media (max-width: 1180px){
+      .heroContent{ grid-template-columns: 1fr; }
+
+      .heroFlow{ min-height: 250px; }
+
+      .flowCard.presenca{ left:0; top:0; }
+      .flowCard.conteudo{ left: 38%; top: 62px; }
+      .flowCard.contato{ right:0; top: 12px; }
+      .flowCard.credibilidade{ left: 20%; bottom:0; }
+
+      .contentGrid,
+      .contractSection{ grid-template-columns: 1fr; }
+
+      .cta{ grid-template-columns: 120px 1fr; }
+
+      .cta .actions{ grid-column: 2; }
+
+      .targetIcon,
+      .targetIcon svg{
+        width: 112px;
+        height: 112px;
+      }
+
+      .benefitStrip{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 760px){
+      .wrap{ padding: 16px; }
+
+      nav{
+        justify-content:flex-start;
+        gap: 14px;
+      }
+
+      .pill{
+        border-left:0;
+        padding-left:0;
+      }
+
+      .serviceHero,
+      .heroContent{ min-height: auto; }
+
+      .heroContent{ padding: 28px; }
+
+      h1{ font-size: calc(42px * var(--scale)); }
+
+      .heroLead{ font-size: calc(19px * var(--scale)); }
+
+      .heroFlow{ min-height: 430px; }
+
+      .flowCard{
+        position:relative;
+        top:auto !important;
+        left:auto !important;
+        right:auto !important;
+        bottom:auto !important;
+        margin-bottom: 14px;
+        width: 100%;
+      }
+
+      .flowLine{ display:none; }
+
+      .infoItem{ grid-template-columns: 1fr; }
+
+      .iconCircle{
+        width: 54px;
+        height: 54px;
+      }
+
+      .sideCard{ padding: 22px; }
+
+      .cta{
+        grid-template-columns: 1fr;
+        text-align:left;
+      }
+
+      .cta .actions{ grid-column:auto; }
+
+      .targetIcon{ justify-content:flex-start; }
+
+      .benefitStrip{ grid-template-columns: 1fr; }
+
+      footer{ align-items:flex-start; }
+
+      .footer-right{ margin-left:0; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <header>
+        <a class="brand" href="../index.html" aria-label="Página inicial da IntareTech">
+          <img class="logo" src="../IntareTech_Horizontal_Cor.png" alt="IntareTech" />
+        </a>
+
+        <nav aria-label="Navegação principal">
+          <a class="navlink" href="../index.html#servicos">Serviços</a>
+          <a class="navlink" href="../index.html#produtos">Produtos</a>
+          <a class="navlink" href="../index.html#beneficios">Benefícios</a>
+          <a class="navlink" href="../index.html#contato">Contato</a>
+          <div class="pill"><span class="dot"></span> Sites profissionais</div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="serviceHero" id="topo" aria-label="Sites profissionais">
+          <div class="heroContent">
+            <div>
+              <div class="eyebrow"><span></span> Serviço IntareTech</div>
+              <h1>Sites profissionais</h1>
+              <p class="heroLead">Presença digital clara, moderna e confiável para empresas que precisam ser encontradas e gerar contatos.</p>
+            </div>
+
+            <div class="heroFlow" aria-hidden="true">
+              <svg class="flowLine" viewBox="0 0 620 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M98 78 C184 78 196 144 286 144 C360 144 370 96 472 96" stroke="rgba(133,232,238,.54)" stroke-width="2" stroke-dasharray="6 8"/>
+                <path d="M300 162 C280 224 218 230 188 264" stroke="rgba(133,232,238,.45)" stroke-width="2" stroke-dasharray="6 8"/>
+                <path d="M398 132 C466 142 510 174 545 222" stroke="rgba(133,232,238,.38)" stroke-width="2" stroke-dasharray="6 8"/>
+                <circle cx="98" cy="78" r="6" fill="rgba(133,232,238,.9)"/>
+                <circle cx="286" cy="144" r="6" fill="rgba(133,232,238,.9)"/>
+                <circle cx="472" cy="96" r="6" fill="rgba(133,232,238,.9)"/>
+                <circle cx="188" cy="264" r="6" fill="rgba(133,232,238,.9)"/>
+              </svg>
+
+              <div class="flowCard presenca">
+                <strong>Presença digital</strong>
+                <svg viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/>
+                  <path d="M8 32H56M32 8C40 16 44 24 44 32C44 40 40 48 32 56M32 8C24 16 20 24 20 32C20 40 24 48 32 56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <div class="flowCard conteudo">
+                <strong>Conteúdo claro</strong>
+                <svg viewBox="0 0 64 64" fill="none">
+                  <path d="M18 8H42L52 18V56H18V8Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M42 8V18H52M26 32H44M26 42H44M26 50H36" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <div class="flowCard contato">
+                <strong>Contatos comerciais</strong>
+                <svg viewBox="0 0 64 64" fill="none">
+                  <path d="M10 16H54V48H10V16Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M12 18L32 34L52 18" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M46 42L58 54" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <div class="flowCard credibilidade">
+                <strong>Credibilidade</strong>
+                <svg viewBox="0 0 64 64" fill="none">
+                  <path d="M32 6L54 14V29C54 44 45 56 32 60C19 56 10 44 10 29V14L32 6Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M22 32L29 39L43 24" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="contentGrid">
+            <div class="infoList">
+              <article class="infoItem">
+                <div class="iconCircle" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none">
+                    <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/>
+                    <path d="M8 32H56M32 8C40 16 44 24 44 32C44 40 40 48 32 56M32 8C24 16 20 24 20 32C20 40 24 48 32 56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>Você conhece a função de um site?</h3>
+                  <p>Um site é a presença digital principal de uma empresa, profissional, produto ou serviço na internet. Ele mostra quem a empresa é, o que oferece e como o cliente pode entrar em contato.</p>
+                </div>
+              </article>
+
+              <article class="infoItem">
+                <div class="iconCircle" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none">
+                    <rect x="8" y="12" width="48" height="40" rx="5" stroke="currentColor" stroke-width="4"/>
+                    <path d="M18 24H46M18 34H38M18 44H30" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>Como funciona?</h3>
+                  <p>Ele apresenta informações essenciais, serviços, diferenciais, canais de contato, imagens, textos institucionais e chamadas comerciais para o público certo.</p>
+                </div>
+              </article>
+
+              <article class="infoItem">
+                <div class="iconCircle" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none">
+                    <path d="M10 56H54" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M16 56V14C16 11 18 9 21 9H43C46 9 48 11 48 14V56" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                    <path d="M25 20H30M34 20H39M25 30H30M34 30H39M25 40H30M34 40H39" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>Minha empresa precisa de um?</h3>
+                  <p>Empresas que desejam ser encontradas no Google, transmitir credibilidade, apresentar serviços e receber contatos comerciais precisam de um site bem estruturado.</p>
+                </div>
+              </article>
+            </div>
+
+            <aside class="sideCard" aria-label="O que estruturamos no site">
+              <h2>O que estruturamos</h2>
+              <ul class="evalList">
+                <li>
+                  <span class="evalIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <path d="M10 16H54V52H10V16Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                      <path d="M10 26H54M20 40H44" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span>Estrutura institucional</span>
+                </li>
+
+                <li>
+                  <span class="evalIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <path d="M18 8H42L52 18V56H18V8Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                      <path d="M42 8V18H52M26 32H44M26 42H44M26 50H36" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span>Conteúdo dos serviços</span>
+                </li>
+
+                <li>
+                  <span class="evalIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/>
+                      <path d="M8 32H56M32 8C40 16 44 24 44 32C44 40 40 48 32 56M32 8C24 16 20 24 20 32C20 40 24 48 32 56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span>SEO básico e indexação</span>
+                </li>
+
+                <li>
+                  <span class="evalIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <path d="M10 16H54V48H10V16Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                      <path d="M12 18L32 34L52 18" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span>Canais de contato</span>
+                </li>
+
+                <li>
+                  <span class="evalIcon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <rect x="16" y="6" width="32" height="52" rx="5" stroke="currentColor" stroke-width="4"/>
+                      <path d="M26 48H38" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span>Layout responsivo</span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="contractSection">
+            <article class="contractCard dark">
+              <h2>Seu site como porta de entrada para novos clientes</h2>
+              <p>A IntareTech cria sites limpos, objetivos e alinhados ao posicionamento da empresa, com foco em clareza, credibilidade e conversão de visitantes em contatos comerciais.</p>
+              <ul class="checkList">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Apresentação profissional da empresa, serviços e diferenciais.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Estrutura preparada para contatos por e-mail, telefone ou WhatsApp.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Visual compatível com computadores, tablets e celulares.</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="contractCard">
+              <h2>Ideal para clínicas, escritórios, prestadores de serviço e empresas locais</h2>
+              <p>Um site bem feito ajuda o cliente a entender rapidamente o que sua empresa oferece, transmite confiança e facilita o contato. É uma base essencial para presença digital e divulgação profissional.</p>
+              <ul class="checkList">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Indicado para empresas que ainda dependem apenas de redes sociais.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Ajuda a organizar serviços, imagens, textos e dados de contato.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Cria uma referência oficial para clientes, parceiros e buscadores.</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="cta">
+            <div class="targetIcon" aria-hidden="true">
+              <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="72" cy="88" r="54" fill="rgba(26,166,166,.15)"/>
+                <circle cx="72" cy="88" r="39" fill="rgba(255,255,255,.72)" stroke="rgba(26,166,166,.45)" stroke-width="8"/>
+                <circle cx="72" cy="88" r="20" fill="rgba(26,166,166,.22)" stroke="rgba(26,166,166,.70)" stroke-width="8"/>
+                <circle cx="72" cy="88" r="8" fill="#f07d18"/>
+                <path d="M72 88L120 40" stroke="#f07d18" stroke-width="7" stroke-linecap="round"/>
+                <path d="M118 41L142 34L135 58" fill="#f07d18"/>
+              </svg>
+            </div>
+
+            <div>
+              <h2>Quer criar um site profissional para sua empresa?</h2>
+              <p>Vamos estruturar uma presença digital clara, objetiva e adequada ao seu público, com foco em credibilidade e geração de contatos.</p>
+            </div>
+
+            <div class="actions">
+              <a class="btn primary orange" href="mailto:contato@intaretech.com.br?subject=Cria%C3%A7%C3%A3o%20de%20site%20-%20An%C3%A1lise%20inicial&body=Ol%C3%A1%2C%20IntareTech.%0A%0AGostaria%20de%20solicitar%20uma%20an%C3%A1lise%20inicial%20para%20cria%C3%A7%C3%A3o%20de%20site.%0A%0ANome%3A%0AEmpresa%3A%0ATelefone%3A%0ASegmento%20da%20empresa%3A%0AResumo%20da%20necessidade%3A">Solicitar análise inicial</a>
+              <a class="btn" href="../index.html#servicos">Ver outros serviços</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="benefitStrip" aria-label="Benefícios de sites profissionais">
+            <div class="benefitItem">
+              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="4"/>
+                <path d="M8 32H56M32 8C40 16 44 24 44 32C44 40 40 48 32 56M32 8C24 16 20 24 20 32C20 40 24 48 32 56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <strong>Mais presença</strong>
+                <span>Sua empresa com endereço oficial na internet.</span>
+              </div>
+            </div>
+
+            <div class="benefitItem">
+              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <path d="M32 6L54 14V29C54 44 45 56 32 60C19 56 10 44 10 29V14L32 6Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M22 32L29 39L43 24" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Mais confiança</strong>
+                <span>Imagem profissional para clientes e parceiros.</span>
+              </div>
+            </div>
+
+            <div class="benefitItem">
+              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <path d="M10 16H54V48H10V16Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M12 18L32 34L52 18" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Mais contatos</strong>
+                <span>Canais comerciais visíveis e bem posicionados.</span>
+              </div>
+            </div>
+
+            <div class="benefitItem">
+              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <rect x="16" y="6" width="32" height="52" rx="5" stroke="currentColor" stroke-width="4"/>
+                <path d="M26 48H38" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <strong>Mais alcance</strong>
+                <span>Layout adaptado para celular, tablet e desktop.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>www.intaretech.com.br</span>
+        <div class="footer-right">
+          <span>© <span id="y"></span></span>
+          <img class="footer-logo" src="../IntareTech_Horizontal.png" alt="IntareTech" />
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
